@@ -97,15 +97,6 @@ All colors MUST be HSL.
     --template-surface-dark: 0 0% 4%;      /* Darker background */
   }
 
-  /* TEMA CORPORATE - Para templates corporativos */
-  .theme-corporate {
-    --template-primary: 220 100% 50%;      /* Azul corporativo */
-    --template-secondary: 200 100% 40%;    /* Azul escuro */
-    --template-accent: 40 100% 50%;        /* Dourado */
-    --template-surface: 0 0% 98%;          /* Superfície clara */
-    --template-surface-dark: 0 0% 95%;     /* Cinza claro */
-  }
-
   /* TEMA DELIVERY - Inspirado no iFood */
   .theme-delivery {
     --background: 0 0% 100%;              /* Fundo branco */
