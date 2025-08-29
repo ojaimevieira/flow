@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/shared/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/shared/ui/card";
+import { Badge } from "@/shared/ui/badge";
 import { ExternalLink, Eye, Code, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const Showcase = () => {
   const projects = [
     {
       id: 1,
-      title: "Landing Page Original",
+      title: "Landing Page Gaming",
       description: "Template de curso/produto com design gaming e elementos neon",
       category: "Curso Online",
       route: "/original",
@@ -27,6 +27,17 @@ const Showcase = () => {
       tags: ["IA", "Vídeos", "Storytelling"],
       status: "Novo",
       color: "from-purple-500 to-pink-600"
+    },
+    {
+      id: 3,
+      title: "Corporate Template",
+      description: "Design limpo e profissional para soluções B2B e empresariais",
+      category: "Corporativo",
+      route: "/corporate",
+      thumbnail: "/api/placeholder/400/300",
+      tags: ["B2B", "Profissional", "Clean"],
+      status: "Preview",
+      color: "from-blue-400 to-indigo-600"
     }
   ];
 
@@ -189,7 +200,7 @@ const Showcase = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">2</div>
+              <div className="text-3xl font-bold text-primary mb-2">3</div>
               <div className="text-muted-foreground">Templates Ativos</div>
             </div>
             <div>

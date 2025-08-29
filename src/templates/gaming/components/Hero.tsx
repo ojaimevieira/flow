@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/shared/ui/button";
 import { ArrowRight, Play, Clock, Users } from "lucide-react";
 import heroImage from "@/assets/hero-product-editing.jpg";
 
