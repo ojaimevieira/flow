@@ -25,10 +25,7 @@ src/
 ├── shared/ui/                   # Componentes base (Button, Card, Badge)
 ├── pages/                       # Páginas globais (Showcase, Index)
 ├── assets/                      # Imagens e recursos (finais)
-└── temp/                        # Pasta temporária para desenvolvimento
-    ├── referencias/             # Screenshots e referências visuais
-    ├── assets-temp/             # Assets temporários durante desenvolvimento
-    └── [projetos-html]/         # Sites HTML para migração
+└── temp/                        # Pasta temporária simples (tudo aqui)
 ```
 
 ### **Padrão de Qualidade:**
@@ -51,21 +48,20 @@ src/
 Pasta para armazenar **temporariamente** arquivos durante desenvolvimento de templates:
 
 ### **📁 Estrutura:**
-- `src/temp/assets-temp/` - Imagens/assets que vão para o template final
-- `src/temp/[projeto-html]/` - Sites HTML completos para migração
-- `src/temp/referencias/` - (Opcional) Screenshots se não enviar na conversa
+- `src/temp/` - Pasta simples para qualquer arquivo temporário durante desenvolvimento
 
 ### **🔄 Workflow:**
 1. **Referências visuais** → Enviar diretamente na conversa (anexar imagem)
-2. **Imagens do template** → Colocar em `src/temp/assets-temp/[projeto]/`
+2. **Assets/HTML** → Jogar tudo em `src/temp/` conforme necessário
 3. **Desenvolver** template baseado nas referências
-4. **Mover** assets de temp/ para `src/assets/[template-name]/`
-5. **Deletar** pasta temp/ após conclusão
+4. **Mover** assets para `src/assets/[template-name]/` automaticamente
+5. **Limpar** pasta temp/ após conclusão (um projeto por vez)
 
 ### **⚠️ Importante:**
 - Pasta é **temporária** e **descartável**
 - Não commitada no Git (está no .gitignore)
-- Sempre limpar após criação do template
+- **Limpar após cada projeto** (um por vez)
+- Estrutura simples: jogue tudo na raiz de temp/
 
 ---
 
@@ -81,7 +77,7 @@ Pasta para armazenar **temporariamente** arquivos durante desenvolvimento de tem
 INSTRUÇÃO: Clone completo desta referência - replicar cada seção, layout e estilo visual
 
 **📂 ASSETS DO TEMPLATE:**
-[Se tiver imagens específicas, colocar em src/temp/assets-temp/[projeto]/]
+[Se tiver imagens específicas, jogar em src/temp/]
 
 **🎯 PROJETO:**
 - Tema/Nicho: [Ex: Curso de Marketing Digital]
@@ -360,7 +356,7 @@ Multiple templates do mesmo produto para testar qual converte melhor
 **HTML MIGRATION REQUEST - [NOME DO PROJETO]**
 
 **📂 PASTA TEMPORÁRIA CRIADA:**
-src/temp/[nome-projeto]/
+src/temp/
 ├── index.html (ou outros HTMLs)
 ├── style.css (ou CSS files)
 ├── script.js (ou JS files)
@@ -405,7 +401,7 @@ Migre este site HTML/CSS/JS completo para nosso sistema React:
 ✅ Performance otimizada
 
 **🗑️ LIMPEZA:**
-Após migração concluída, a pasta src/temp/ pode ser deletada
+Após migração concluída, limpar src/temp/ para próximo projeto
 
 **PREPARADO PARA INICIAR A MIGRAÇÃO COMPLETA?**
 ```
@@ -511,12 +507,12 @@ TEMPLATE REQUEST - CURSO DE CULINÁRIA VEGANA
 INSTRUÇÃO: Clone completo desta referência
 
 📂 ASSETS DO TEMPLATE: 
-Se tiver imagens específicas, colocar em:
-src/temp/assets-temp/culinaria-vegana/
-├── images/
-│   ├── hero-bg.jpg
-│   ├── receita-1.jpg
-│   └── logo.svg
+Imagens específicas em:
+src/temp/
+├── hero-bg.jpg
+├── receita-1.jpg
+├── receita-2.jpg
+└── logo.svg
 
 🎯 PROJETO:
 - Tema: Curso de Culinária Vegana
@@ -540,7 +536,7 @@ Transforme sua cozinha em um laboratório de sabores
 ```
 HTML MIGRATION REQUEST - SITE EMPRESA
 
-📂 src/temp/site-empresa/
+📂 Arquivos em src/temp/:
 ├── index.html
 ├── styles.css
 ├── script.js
