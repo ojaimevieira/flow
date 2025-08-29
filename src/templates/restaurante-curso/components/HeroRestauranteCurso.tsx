@@ -23,80 +23,96 @@ const HeroRestauranteCurso = () => {
 
           {/* Logo da Imagem com Emojis Animados */}
           <div className="relative inline-block mb-16">
-            {/* Imagem Central */}
-            <div className="relative w-80 h-80 mx-auto">
-              {/* Imagem da marca */}
+            {/* Container para imagem e emojis circulares */}
+            <div className="relative mx-auto flex items-center justify-center" style={{ width: '420px', height: '420px' }}>
+              {/* Imagem Central - Tamanho Original */}
               <img 
                 src={logoVendaoComida} 
                 alt="Vendão Comida Instagram" 
-                className="w-full h-full object-contain drop-shadow-2xl"
+                className="max-w-none w-auto h-auto drop-shadow-2xl relative z-10"
+                style={{ maxHeight: '280px', width: 'auto' }}
               />
 
-              {/* Emojis animados por cima da imagem */}
-              {/* Top */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
-                <div className="text-4xl animate-bounce" style={{ animationDelay: '0s' }}>🍕</div>
+              {/* Emojis em círculo perfeito - Mais próximos do centro */}
+              {/* 0° - Top */}
+              <div className="absolute transform -translate-x-1/2" style={{ top: '8%', left: '50%' }}>
+                <div className="text-5xl animate-bounce" style={{ animationDelay: '0s' }}>🍕</div>
               </div>
               
-              {/* Top Right */}
-              <div className="absolute top-12 right-8 transform">
-                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.2s' }}>🍟</div>
+              {/* 45° - Top Right */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ top: '20%', right: '20%' }}>
+                <div className="text-5xl animate-bounce" style={{ animationDelay: '0.2s' }}>🍟</div>
               </div>
               
-              {/* Right */}
-              <div className="absolute right-0 top-1/2 transform translate-x-4 -translate-y-1/2">
-                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.4s' }}>😘</div>
+              {/* 90° - Right */}
+              <div className="absolute transform -translate-y-1/2" style={{ top: '50%', right: '8%' }}>
+                <div className="text-5xl animate-bounce" style={{ animationDelay: '0.4s' }}>😘</div>
               </div>
               
-              {/* Bottom Right */}
-              <div className="absolute bottom-12 right-8 transform">
-                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.6s' }}>🍩</div>
+              {/* 135° - Bottom Right */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ bottom: '20%', right: '20%' }}>
+                <div className="text-5xl animate-bounce" style={{ animationDelay: '0.6s' }}>🍩</div>
               </div>
               
-              {/* Bottom */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
-                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.8s' }}>💰</div>
+              {/* 180° - Bottom */}
+              <div className="absolute transform -translate-x-1/2" style={{ bottom: '8%', left: '50%' }}>
+                <div className="text-5xl animate-bounce" style={{ animationDelay: '0.8s' }}>💰</div>
               </div>
               
-              {/* Bottom Left */}
-              <div className="absolute bottom-12 left-8 transform">
-                <div className="text-4xl animate-bounce" style={{ animationDelay: '1s' }}>🍦</div>
+              {/* 225° - Bottom Left */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ bottom: '20%', left: '20%' }}>
+                <div className="text-5xl animate-bounce" style={{ animationDelay: '1s' }}>🍦</div>
               </div>
               
-              {/* Left */}
-              <div className="absolute left-0 top-1/2 transform -translate-x-4 -translate-y-1/2">
-                <div className="text-4xl animate-bounce" style={{ animationDelay: '1.2s' }}>🌮</div>
+              {/* 270° - Left */}
+              <div className="absolute transform -translate-y-1/2" style={{ top: '50%', left: '8%' }}>
+                <div className="text-5xl animate-bounce" style={{ animationDelay: '1.2s' }}>🌮</div>
               </div>
               
-              {/* Top Left */}
-              <div className="absolute top-12 left-8 transform">
-                <div className="text-4xl animate-bounce" style={{ animationDelay: '1.4s' }}>💰</div>
+              {/* 315° - Top Left */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ top: '20%', left: '20%' }}>
+                <div className="text-5xl animate-bounce" style={{ animationDelay: '1.4s' }}>💰</div>
+              </div>
+
+              {/* Emojis adicionais em círculo intermediário */}
+              {/* 22.5° */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ top: '15%', right: '30%' }}>
+                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.1s' }}>🍫</div>
               </div>
               
-              {/* Emojis adicionais em posições intermediárias */}
-              <div className="absolute top-6 left-1/4 transform">
-                <div className="text-3xl animate-bounce" style={{ animationDelay: '1.6s' }}>🍫</div>
+              {/* 67.5° */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ top: '30%', right: '15%' }}>
+                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.3s' }}>🍷</div>
               </div>
-              <div className="absolute top-6 right-1/4 transform">
-                <div className="text-3xl animate-bounce" style={{ animationDelay: '1.8s' }}>🍷</div>
+              
+              {/* 112.5° */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ bottom: '30%', right: '15%' }}>
+                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.5s' }}>😍</div>
               </div>
-              <div className="absolute bottom-6 left-1/4 transform">
-                <div className="text-3xl animate-bounce" style={{ animationDelay: '2s' }}>😍</div>
+              
+              {/* 157.5° */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ bottom: '15%', right: '30%' }}>
+                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.7s' }}>🍔</div>
               </div>
-              <div className="absolute bottom-6 right-1/4 transform">
-                <div className="text-3xl animate-bounce" style={{ animationDelay: '2.2s' }}>🍔</div>
+              
+              {/* 202.5° */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ bottom: '15%', left: '30%' }}>
+                <div className="text-4xl animate-bounce" style={{ animationDelay: '0.9s' }}>☕</div>
               </div>
-              <div className="absolute left-16 top-20 transform">
-                <div className="text-3xl animate-bounce" style={{ animationDelay: '2.4s' }}>☕</div>
+              
+              {/* 247.5° */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ bottom: '30%', left: '15%' }}>
+                <div className="text-4xl animate-bounce" style={{ animationDelay: '1.1s' }}>🍺</div>
               </div>
-              <div className="absolute right-16 top-20 transform">
-                <div className="text-3xl animate-bounce" style={{ animationDelay: '2.6s' }}>🍺</div>
+              
+              {/* 292.5° */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ top: '30%', left: '15%' }}>
+                <div className="text-4xl animate-bounce" style={{ animationDelay: '1.3s' }}>🍝</div>
               </div>
-              <div className="absolute left-16 bottom-20 transform">
-                <div className="text-3xl animate-bounce" style={{ animationDelay: '2.8s' }}>🍝</div>
-              </div>
-              <div className="absolute right-16 bottom-20 transform">
-                <div className="text-3xl animate-bounce" style={{ animationDelay: '3s' }}>🥤</div>
+              
+              {/* 337.5° */}
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2" style={{ top: '15%', left: '30%' }}>
+                <div className="text-4xl animate-bounce" style={{ animationDelay: '1.5s' }}>🥤</div>
               </div>
             </div>
           </div>
