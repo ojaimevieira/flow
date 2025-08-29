@@ -54,10 +54,10 @@ const VideoShowcase = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-foreground">Veja na prática </span>
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">alguns vídeos</span>
+            <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">alguns vídeos</span>
             <br />
             <span className="text-foreground">criados com </span>
-            <span className="bg-gradient-to-r from-accent to-neon-pink bg-clip-text text-transparent">IA mainframe</span>
+            <span className="bg-gradient-to-r from-template-secondary to-template-primary bg-clip-text text-transparent">IA mainframe</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Exemplos reais de vídeos criados pelos nossos alunos usando as técnicas ensinadas no curso
@@ -73,7 +73,7 @@ const VideoShowcase = () => {
             >
               <CardContent className="p-0">
                 {/* Video Thumbnail */}
-                <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
+                <div className="relative aspect-video bg-gradient-to-br from-template-primary/20 to-template-secondary/20 overflow-hidden">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
                   
                   {/* Play Button */}
@@ -101,7 +101,7 @@ const VideoShowcase = () => {
         {/* Bottom Text */}
         <div className="text-center mt-16">
           <p className="text-muted-foreground text-lg">
-            <span className="text-primary font-semibold">Todos esses vídeos</span> foram criados por pessoas que nunca haviam editado vídeos antes
+            <span className="text-template-primary font-semibold">Todos esses vídeos</span> foram criados por pessoas que nunca haviam editado vídeos antes
           </p>
         </div>
       </div>

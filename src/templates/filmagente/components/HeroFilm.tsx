@@ -25,10 +25,10 @@ const HeroFilm = () => {
           <div className="flex items-center space-x-3 mb-8">
             <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
               <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <div className="w-3 h-3 bg-template-primary rounded-full"></div>
               </div>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">
               @FilmAgente
             </span>
           </div>
@@ -36,11 +36,11 @@ const HeroFilm = () => {
           {/* Main Heading */}
           <div className="space-y-4 mb-8">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-foreground via-template-primary to-template-secondary bg-clip-text text-transparent">
                 Domine a Criação de
               </span>
               <br />
-              <span className="bg-gradient-to-r from-accent via-primary to-neon-pink bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-template-secondary via-template-primary to-template-secondary bg-clip-text text-transparent">
                 Vídeos com IA
               </span>
               <br />
@@ -71,14 +71,14 @@ const HeroFilm = () => {
               <div className="flex items-baseline space-x-3">
                 <span className="text-muted-foreground line-through text-lg">De R$997,00</span>
                 <span className="text-muted-foreground">por</span>
-                <span className="text-3xl font-bold text-primary">12x de R$19,70*</span>
+                <span className="text-3xl font-bold text-template-primary">12x de R$19,70*</span>
               </div>
             </div>
 
             {/* Benefits */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Shield className="w-5 h-5 text-primary flex-shrink-0" />
+                <Shield className="w-5 h-5 text-template-primary flex-shrink-0" />
                 <span className="text-foreground font-medium">Acesso imediato</span>
               </div>
               <div className="flex items-center space-x-3">
@@ -96,8 +96,8 @@ const HeroFilm = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
+        <div className="w-6 h-10 border-2 border-template-primary rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-template-primary rounded-full mt-2 animate-pulse" />
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ import Footer from "@/shared/Footer";
 
 const FilmAgenteLanding = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="theme-filmagente min-h-screen bg-background">
       <HeroFilm />
       <VideoExpertise />
       <VideoModules />

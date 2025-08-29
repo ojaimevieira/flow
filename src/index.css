@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark gaming theme with neon pink accents */
+    /* Dark gaming theme with neon pink accents (DEFAULT) */
     --background: 0 0% 6%;
     --foreground: 0 0% 98%;
 
@@ -39,24 +39,71 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Custom gaming colors */
-    --neon-pink: 330 100% 60%;
-    --neon-purple: 270 100% 60%;
-    --dark-card: 0 0% 8%;
-    --darker-bg: 0 0% 4%;
+    /* Template system colors - DEFAULT (Gaming theme) */
+    --template-primary: 330 100% 60%;      /* Neon pink */
+    --template-secondary: 270 100% 60%;    /* Neon purple */
+    --template-accent: 300 100% 50%;       /* Magenta */
+    --template-surface: 0 0% 8%;           /* Dark card */
+    --template-surface-dark: 0 0% 4%;      /* Darker background */
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(330 100% 60%), hsl(270 100% 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%));
-    --gradient-hero: linear-gradient(135deg, hsl(330 100% 60% / 0.2), hsl(270 100% 60% / 0.2));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--template-primary)), hsl(var(--template-secondary)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--template-surface)), hsl(0 0% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--template-primary) / 0.2), hsl(var(--template-secondary) / 0.2));
     
     /* Shadows and glows */
-    --shadow-neon: 0 0 30px hsl(330 100% 60% / 0.3);
+    --shadow-neon: 0 0 30px hsl(var(--template-primary) / 0.3);
     --shadow-card: 0 10px 30px hsl(0 0% 0% / 0.5);
-    --glow-pink: 0 0 20px hsl(330 100% 60% / 0.4);
+    --glow-template: 0 0 20px hsl(var(--template-primary) / 0.4);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* TEMA FILMAGENTE - Cores específicas #4cf2d0 e #bb4de4 */
+  .theme-filmagente {
+    /* Sobrescrever as cores do sistema shadcn/ui também */
+    --accent: 166 85% 47%;                /* Tom mais escuro do teal para accent */
+    --accent-foreground: 0 0% 100%;
+    
+    /* Cores do sistema template */
+    --template-primary: 166 85% 57%;      /* #4cf2d0 - Teal específico */
+    --template-secondary: 283 69% 59%;    /* #bb4de4 - Roxo específico */
+    --template-accent: 166 85% 47%;       /* Tom mais escuro do teal */
+    --template-surface: 220 25% 8%;       /* Superfície com leve tom azulado */
+    --template-surface-dark: 220 30% 4%;  /* Fundo mais escuro com tom azulado */
+    
+    /* Gradientes usando exatamente as duas cores especificadas */
+    --gradient-primary: linear-gradient(135deg, hsl(166 85% 57%), hsl(283 69% 59%));
+    --gradient-secondary: linear-gradient(45deg, hsl(166 85% 57% / 0.1), hsl(283 69% 59% / 0.1));
+    --gradient-hero: radial-gradient(ellipse at center, hsl(166 85% 57% / 0.15), hsl(283 69% 59% / 0.15), transparent);
+    
+    /* Sombras e glows com as cores específicas */
+    --shadow-neon: 0 0 40px hsl(166 85% 57% / 0.4), 0 0 80px hsl(283 69% 59% / 0.2);
+    --glow-template: 0 0 30px hsl(166 85% 57% / 0.6), 0 0 60px hsl(166 85% 57% / 0.3);
+    
+    /* Background mais dramático */
+    --background: 220 30% 3%;
+    --card: 220 25% 6%;
+    --border: 220 20% 15%;
+  }
+
+  /* TEMA GAMING - Cores originais (pode ser usado em outros templates) */
+  .theme-gaming {
+    --template-primary: 330 100% 60%;      /* Neon pink */
+    --template-secondary: 270 100% 60%;    /* Neon purple */
+    --template-accent: 300 100% 50%;       /* Magenta */
+    --template-surface: 0 0% 8%;           /* Dark card */
+    --template-surface-dark: 0 0% 4%;      /* Darker background */
+  }
+
+  /* TEMA CORPORATE - Para templates corporativos */
+  .theme-corporate {
+    --template-primary: 220 100% 50%;      /* Azul corporativo */
+    --template-secondary: 200 100% 40%;    /* Azul escuro */
+    --template-accent: 40 100% 50%;        /* Dourado */
+    --template-surface: 0 0% 98%;          /* Superfície clara */
+    --template-surface-dark: 0 0% 95%;     /* Cinza claro */
   }
 }
 
@@ -82,10 +129,42 @@ All colors MUST be HSL.
 
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(330 100% 60% / 0.4);
+    box-shadow: 0 0 20px hsl(var(--template-primary) / 0.4);
   }
   50% {
-    box-shadow: 0 0 30px hsl(330 100% 60% / 0.6);
+    box-shadow: 0 0 30px hsl(var(--template-primary) / 0.6);
+  }
+}
+
+/* Animação específica do filmagente - efeito com as cores corretas */
+@keyframes nebula-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px hsl(166 85% 57% / 0.3),
+      0 0 40px hsl(283 69% 59% / 0.2),
+      0 0 80px hsl(166 85% 57% / 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px hsl(166 85% 57% / 0.5),
+      0 0 60px hsl(283 69% 59% / 0.3),
+      0 0 120px hsl(283 69% 59% / 0.1);
+  }
+}
+
+/* Efeito de partículas flutuantes */
+@keyframes particle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.8;
+  }
+  33% {
+    transform: translateY(-15px) rotate(120deg);
+    opacity: 1;
+  }
+  66% {
+    transform: translateY(-5px) rotate(240deg);
+    opacity: 0.6;
   }
 }
 
@@ -95,4 +174,25 @@ All colors MUST be HSL.
 
 .animate-glow-pulse {
   animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Animações específicas do filmagente */
+.animate-nebula-glow {
+  animation: nebula-glow 3s ease-in-out infinite;
+}
+
+.animate-particle-float {
+  animation: particle-float 8s ease-in-out infinite;
+}
+
+/* Efeitos específicos para o tema filmagente */
+.theme-filmagente .glow-text {
+  text-shadow: 0 0 20px hsl(166 85% 57% / 0.8);
+}
+
+.theme-filmagente .neon-border {
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, hsl(166 85% 57%), hsl(283 69% 59%)) padding-box,
+              linear-gradient(135deg, hsl(166 85% 57%), hsl(283 69% 59%)) border-box;
+  border-radius: 12px;
 }

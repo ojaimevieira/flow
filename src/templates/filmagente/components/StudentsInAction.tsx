@@ -25,10 +25,10 @@ const StudentsInAction = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-foreground">Veja na prática </span>
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">alguns vídeos</span>
+            <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">alguns vídeos</span>
             <br />
             <span className="text-foreground">criados com </span>
-            <span className="bg-gradient-to-r from-accent to-neon-pink bg-clip-text text-transparent">IA mainframe</span>
+            <span className="bg-gradient-to-r from-template-secondary to-template-primary bg-clip-text text-transparent">IA mainframe</span>
           </h2>
         </div>
 
@@ -37,9 +37,9 @@ const StudentsInAction = () => {
           {studentPhotos.map((photo) => (
             <div 
               key={photo.id}
-              className="aspect-[4/5] bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer group"
+              className="aspect-[4/5] bg-gradient-to-br from-template-primary/20 to-template-secondary/20 rounded-2xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer group"
             >
-              <div className="w-full h-full bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center relative">
+              <div className="w-full h-full bg-gradient-to-br from-template-primary/30 to-template-secondary/30 flex items-center justify-center relative">
                 {/* Placeholder for student photo */}
                 <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                   <div className="w-8 h-8 bg-primary/50 rounded-full"></div>
@@ -59,7 +59,7 @@ const StudentsInAction = () => {
         {/* Bottom Text */}
         <div className="text-center">
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            <span className="text-primary font-semibold">Mais de 2.500 pessoas</span> já estão criando vídeos incríveis 
+            <span className="text-template-primary font-semibold">Mais de 2.500 pessoas</span> já estão criando vídeos incríveis 
             com IA usando as técnicas do FilmAgente
           </p>
         </div>

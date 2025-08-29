@@ -15,11 +15,11 @@ const VideoExpertise = () => {
           <div className="text-left mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
               <span className="text-foreground">Criar vídeos </span>
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">já foi</span>
+              <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">já foi</span>
               <br />
               <span className="text-foreground">coisa de especialista.</span>
               <br />
-              <span className="bg-gradient-to-r from-accent to-neon-pink bg-clip-text text-transparent">Hoje é mais.</span>
+              <span className="bg-gradient-to-r from-template-secondary to-template-primary bg-clip-text text-transparent">Hoje é mais.</span>
             </h2>
           </div>
 

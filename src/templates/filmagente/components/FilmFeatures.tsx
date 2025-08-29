@@ -25,11 +25,11 @@ const FilmFeatures = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 border-primary text-primary">
+          <Badge variant="outline" className="mb-4 border-template-primary text-template-primary">
             🎬 Criação de Vídeos com IA
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">
               Do Zero ao Profissional
             </span>
           </h2>
@@ -44,7 +44,7 @@ const FilmFeatures = () => {
           <div className="relative">
             <Card className="bg-dark-card border-primary/20 shadow-2xl overflow-hidden">
               <CardContent className="p-0">
-                <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                <div className="relative aspect-video bg-gradient-to-br from-template-primary/20 to-template-secondary/20 flex items-center justify-center">
                   <div className="absolute inset-0 bg-black/20" />
                   <Button 
                     size="lg" 
@@ -119,7 +119,7 @@ const FilmFeatures = () => {
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-2xl font-bold text-primary mb-1">{stat.number}</div>
+                <div className="text-2xl font-bold text-template-primary mb-1">{stat.number}</div>
                 <div className="text-muted-foreground text-sm">{stat.label}</div>
               </CardContent>
             </Card>
@@ -130,7 +130,7 @@ const FilmFeatures = () => {
         <Card className="bg-gradient-to-r from-dark-card to-darker-bg border-primary/30 shadow-2xl">
           <CardContent className="p-8 text-center">
             <div className="flex items-center justify-center mb-4">
-              <Shield className="w-16 h-16 text-primary" />
+              <Shield className="w-16 h-16 text-template-primary" />
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">
               Garantia Incondicional de 7 Dias

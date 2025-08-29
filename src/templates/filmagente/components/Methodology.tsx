@@ -31,7 +31,7 @@ const Methodology = () => {
       description: "Dominando as principais plataformas de criação de vídeo com IA",
       lessons: ["Runway ML", "Midjourney para vídeos", "ChatGPT para roteiros", "Ferramentas de edição IA"],
       duration: "3h 15min", 
-      color: "from-purple-500 to-pink-500"
+      color: "from-template-secondary to-template-primary"
     },
     {
       number: "03",
@@ -67,7 +67,7 @@ const Methodology = () => {
       description: "Fazendo seus vídeos alcançarem milhares de pessoas",
       lessons: ["SEO para YouTube", "Algoritmos de redes sociais", "Thumbnails que convertem", "Timing de publicação"],
       duration: "2h 15min",
-      color: "from-pink-500 to-rose-500"
+      color: "from-template-primary to-template-secondary"
     }
   ];
 
@@ -82,14 +82,14 @@ const Methodology = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-6 border-primary text-primary text-lg px-6 py-2">
+          <Badge variant="outline" className="mb-6 border-template-primary text-template-primary text-lg px-6 py-2">
             📚 Metodologia Completa
           </Badge>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-foreground">O método completo para criar</span>
             <br />
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">
               vídeos com IA, do zero ao viral
             </span>
           </h2>
@@ -155,7 +155,7 @@ const Methodology = () => {
         <div className="text-center">
           <div className="grid md:grid-cols-3 gap-8 max-w-2xl mx-auto mb-12">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">12h+</div>
+              <div className="text-3xl font-bold text-template-primary mb-2">12h+</div>
               <div className="text-muted-foreground">de Conteúdo</div>
             </div>
             <div className="text-center">
@@ -163,7 +163,7 @@ const Methodology = () => {
               <div className="text-muted-foreground">Vídeo Aulas</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-neon-pink mb-2">∞</div>
+              <div className="text-3xl font-bold text-template-primary mb-2">∞</div>
               <div className="text-muted-foreground">Acesso Vitalício</div>
             </div>
           </div>

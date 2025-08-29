@@ -56,12 +56,12 @@ const FAQ = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-6 border-primary text-primary text-lg px-6 py-2">
+          <Badge variant="outline" className="mb-6 border-template-primary text-template-primary text-lg px-6 py-2">
             ❓ Dúvidas Frequentes
           </Badge>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">
               Dúvidas Frequentes
             </span>
           </h2>
@@ -88,9 +88,9 @@ const FAQ = () => {
                   </h3>
                   <div className="flex-shrink-0">
                     {openFaq === index ? (
-                      <Minus className="w-5 h-5 text-primary" />
+                      <Minus className="w-5 h-5 text-template-primary" />
                     ) : (
-                      <Plus className="w-5 h-5 text-primary" />
+                      <Plus className="w-5 h-5 text-template-primary" />
                     )}
                   </div>
                 </button>

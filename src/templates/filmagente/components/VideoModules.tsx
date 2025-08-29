@@ -46,7 +46,7 @@ const VideoModules = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-foreground">Veja como </span>
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">dominar</span>
+            <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">dominar</span>
             <span className="text-foreground"> a criação de vídeos com IA</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -63,7 +63,7 @@ const VideoModules = () => {
             >
               <CardContent className="p-0">
                 {/* Module Image */}
-                <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 overflow-hidden">
+                <div className="relative aspect-video bg-gradient-to-br from-template-primary/20 to-template-secondary/20 overflow-hidden">
                   <div className="absolute inset-0 bg-black/20" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
@@ -79,7 +79,7 @@ const VideoModules = () => {
 
                 {/* Module Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-template-primary transition-colors">
                     {module.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">

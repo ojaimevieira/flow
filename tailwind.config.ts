@@ -52,11 +52,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom gaming colors
-				'neon-pink': 'hsl(var(--neon-pink))',
-				'neon-purple': 'hsl(var(--neon-purple))',
-				'dark-card': 'hsl(var(--dark-card))',
-				'darker-bg': 'hsl(var(--darker-bg))',
+				// Template system colors
+				'template': {
+					primary: 'hsl(var(--template-primary))',
+					secondary: 'hsl(var(--template-secondary))',
+					accent: 'hsl(var(--template-accent))',
+					surface: 'hsl(var(--template-surface))',
+					'surface-dark': 'hsl(var(--template-surface-dark))',
+				},
+				// Legacy gaming colors (mantém compatibilidade)
+				'neon-pink': 'hsl(var(--template-primary))',
+				'neon-purple': 'hsl(var(--template-secondary))',
+				'dark-card': 'hsl(var(--template-surface))',
+				'darker-bg': 'hsl(var(--template-surface-dark))',
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
@@ -66,7 +74,7 @@ export default {
 			boxShadow: {
 				'neon': 'var(--shadow-neon)',
 				'card-custom': 'var(--shadow-card)',
-				'glow': 'var(--glow-pink)',
+				'glow': 'var(--glow-template)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -92,10 +100,10 @@ export default {
 				},
 				'glow-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px hsl(330 100% 60% / 0.4)'
+						boxShadow: '0 0 20px hsl(var(--template-primary) / 0.4)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px hsl(330 100% 60% / 0.8)'
+						boxShadow: '0 0 40px hsl(var(--template-primary) / 0.8)'
 					}
 				},
 				'float': {
@@ -105,13 +113,37 @@ export default {
 					'50%': {
 						transform: 'translateY(-10px)'
 					}
+				},
+				'nebula-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(166 85% 57% / 0.3), 0 0 40px hsl(283 69% 59% / 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 30px hsl(166 85% 57% / 0.5), 0 0 60px hsl(283 69% 59% / 0.3)'
+					}
+				},
+				'particle-float': {
+					'0%, 100%': {
+						transform: 'translateY(0px) rotate(0deg)',
+						opacity: '0.8'
+					},
+					'33%': {
+						transform: 'translateY(-15px) rotate(120deg)',
+						opacity: '1'
+					},
+					'66%': {
+						transform: 'translateY(-5px) rotate(240deg)',
+						opacity: '0.6'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'nebula-glow': 'nebula-glow 3s ease-in-out infinite',
+				'particle-float': 'particle-float 8s ease-in-out infinite'
 			}
 		}
 	},

@@ -33,7 +33,7 @@ const TargetAudience = () => {
       icon: TrendingUp,
       title: "Influenciadores",
       description: "Que buscam se destacar com conteúdo único e profissional",
-      color: "text-pink-400"
+      color: "text-template-primary"
     },
     {
       icon: BookOpen,
@@ -55,12 +55,12 @@ const TargetAudience = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6">
             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-              <div className="w-4 h-4 bg-primary rounded-full"></div>
+              <div className="w-4 h-4 bg-template-primary rounded-full"></div>
             </div>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">
               Pra quem é esse curso?
             </span>
           </h2>
@@ -79,11 +79,11 @@ const TargetAudience = () => {
               className="bg-dark-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow group"
             >
               <CardContent className="p-8 text-center">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 p-4 mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r from-template-primary/20 to-template-secondary/20 p-4 mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
                   <profile.icon className={`w-8 h-8 ${profile.color}`} />
                 </div>
                 
-                <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-template-primary transition-colors">
                   {profile.title}
                 </h3>
                 
@@ -95,7 +95,7 @@ const TargetAudience = () => {
           ))}
 
           {/* Special Card - Call to Action */}
-          <Card className="bg-gradient-to-br from-primary/20 to-accent/20 border-primary/40 group md:col-span-2 lg:col-span-1">
+          <Card className="bg-gradient-to-br from-template-primary/20 to-template-secondary/20 border-primary/40 group md:col-span-2 lg:col-span-1">
             <CardContent className="p-8 text-center h-full flex flex-col justify-center">
               <div className="text-6xl mb-4">🎯</div>
               <h3 className="text-xl font-bold mb-4 text-foreground">

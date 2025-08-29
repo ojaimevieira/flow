@@ -27,20 +27,20 @@ const FilmPricing = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-foreground">Garanta seu acesso com valor</span>
             <br />
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">promocional de lançamento</span>
+            <span className="bg-gradient-to-r from-template-primary to-template-secondary bg-clip-text text-transparent">promocional de lançamento</span>
           </h2>
         </div>
 
         {/* Pricing Card */}
         <div className="max-w-2xl mx-auto">
-          <Card className="bg-gradient-to-br from-dark-card to-darker-bg border-2 border-primary shadow-2xl shadow-primary/10 relative overflow-hidden">
+          <Card className="bg-gradient-to-br from-dark-card to-darker-bg border-2 border-template-primary shadow-2xl shadow-primary/10 relative overflow-hidden">
             <CardHeader className="text-center pt-8 pb-6">
               {/* Main Price */}
               <div className="space-y-6">
                 <div className="text-center">
-                  <div className="text-8xl font-bold text-primary mb-2">R$19,70*</div>
+                  <div className="text-8xl font-bold text-template-primary mb-2">R$19,70*</div>
                   <div className="text-muted-foreground text-lg">
-                    *valor da primeira parcela de <span className="text-primary font-bold">12x de R$19,70</span>
+                    *valor da primeira parcela de <span className="text-template-primary font-bold">12x de R$19,70</span>
                   </div>
                 </div>
               </div>
@@ -52,7 +52,7 @@ const FilmPricing = () => {
                 <div className="bg-darker-bg/50 rounded-xl p-6 border border-primary/20">
                   <div className="grid md:grid-cols-2 gap-4 text-center">
                     <div>
-                      <div className="text-2xl font-bold text-primary mb-2">12x R$ 19,70</div>
+                      <div className="text-2xl font-bold text-template-primary mb-2">12x R$ 19,70</div>
                       <div className="text-muted-foreground text-sm">no cartão de crédito</div>
                     </div>
                     <div>
@@ -119,7 +119,7 @@ const FilmPricing = () => {
                     <span>Acesso imediato</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <CheckCircle className="w-4 h-4 text-template-primary" />
                     <span>Satisfação garantida</span>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const FilmPricing = () => {
         {/* Bottom Message */}
         <div className="text-center mt-16">
           <p className="text-muted-foreground text-lg">
-            <span className="text-primary font-semibold">Quer ter ainda mais certeza?</span> Role para baixo e veja as dúvidas mais frequentes
+            <span className="text-template-primary font-semibold">Quer ter ainda mais certeza?</span> Role para baixo e veja as dúvidas mais frequentes
           </p>
         </div>
       </div>
