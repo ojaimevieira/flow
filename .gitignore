@@ -15,6 +15,11 @@ exports/**/dist-standalone/
 exports/**/*.zip
 *.local
 
+# Temporary files for template development
+src/temp/*
+!src/temp/README.md
+!src/temp/*/README.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

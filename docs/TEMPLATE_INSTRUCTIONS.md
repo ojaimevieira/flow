@@ -24,7 +24,11 @@ src/
 │   │       └── [Nome]Landing.tsx
 ├── shared/ui/                   # Componentes base (Button, Card, Badge)
 ├── pages/                       # Páginas globais (Showcase, Index)
-└── assets/                      # Imagens e recursos
+├── assets/                      # Imagens e recursos (finais)
+└── temp/                        # Pasta temporária para desenvolvimento
+    ├── referencias/             # Screenshots e referências visuais
+    ├── assets-temp/             # Assets temporários durante desenvolvimento
+    └── [projetos-html]/         # Sites HTML para migração
 ```
 
 ### **Padrão de Qualidade:**
@@ -41,6 +45,28 @@ src/
 - **Gaming**: `src/templates/gaming/` (Template com tema gaming)
 - **Restaurante**: `src/templates/restaurante-curso/` (Curso para restaurantes)
 
+## 📂 Pasta Temporária (src/temp/)
+
+### **🎯 Finalidade:**
+Pasta para armazenar **temporariamente** arquivos durante desenvolvimento de templates:
+
+### **📁 Estrutura:**
+- `src/temp/assets-temp/` - Imagens/assets que vão para o template final
+- `src/temp/[projeto-html]/` - Sites HTML completos para migração
+- `src/temp/referencias/` - (Opcional) Screenshots se não enviar na conversa
+
+### **🔄 Workflow:**
+1. **Referências visuais** → Enviar diretamente na conversa (anexar imagem)
+2. **Imagens do template** → Colocar em `src/temp/assets-temp/[projeto]/`
+3. **Desenvolver** template baseado nas referências
+4. **Mover** assets de temp/ para `src/assets/[template-name]/`
+5. **Deletar** pasta temp/ após conclusão
+
+### **⚠️ Importante:**
+- Pasta é **temporária** e **descartável**
+- Não commitada no Git (está no .gitignore)
+- Sempre limpar após criação do template
+
 ---
 
 ## 🎯 8 Tipos de Template Requests
@@ -51,8 +77,11 @@ src/
 **TEMPLATE REQUEST - [NOME DO PROJETO]**
 
 **🎨 REFERÊNCIA VISUAL:**
-[Anexar imagem/screenshot da referência]
+[Anexar imagem diretamente na conversa]
 INSTRUÇÃO: Clone completo desta referência - replicar cada seção, layout e estilo visual
+
+**📂 ASSETS DO TEMPLATE:**
+[Se tiver imagens específicas, colocar em src/temp/assets-temp/[projeto]/]
 
 **🎯 PROJETO:**
 - Tema/Nicho: [Ex: Curso de Marketing Digital]
@@ -478,8 +507,16 @@ Após migração concluída, a pasta src/temp/ pode ser deletada
 ```
 TEMPLATE REQUEST - CURSO DE CULINÁRIA VEGANA
 
-🎨 REFERÊNCIA VISUAL: [anexar screenshot]
+🎨 REFERÊNCIA VISUAL: [anexar screenshot diretamente na conversa]
 INSTRUÇÃO: Clone completo desta referência
+
+📂 ASSETS DO TEMPLATE: 
+Se tiver imagens específicas, colocar em:
+src/temp/assets-temp/culinaria-vegana/
+├── images/
+│   ├── hero-bg.jpg
+│   ├── receita-1.jpg
+│   └── logo.svg
 
 🎯 PROJETO:
 - Tema: Curso de Culinária Vegana
