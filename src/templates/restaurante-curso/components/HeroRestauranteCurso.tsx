@@ -36,13 +36,13 @@ const HeroRestauranteCurso = () => {
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline - Menor */}
-          <h1 className="text-[2.5rem] leading-[1.2] max-w-[37.5rem] mx-auto font-bold text-purple-600 mb-12">
+          <h1 className="text-[2.5rem] leading-[1.2] max-w-[37.5rem] mx-auto font-bold text-purple-600 mb-2">
             AUMENTE SEU FATURAMENTO <span className="text-purple-800">EM ATÉ 30%</span> ATRAINDO MAIS CLIENTES{" "}
             <span className="text-purple-800">TODOS OS DIAS!</span>
           </h1>
 
           {/* Logo da Imagem com Emojis Animados */}
-          <div className="relative inline-block mb-16">
+          <div className="relative inline-block mb-1">
             {/* Container para imagem e emojis circulares */}
             <div className="relative mx-auto flex items-center justify-center" style={{ width: 440, height: 440 }}>
               {/* Emojis em anel calculado, sempre fora do logo */}
@@ -77,7 +77,7 @@ const HeroRestauranteCurso = () => {
           </div>
 
           {/* Subtitle */}
-          <div className="mb-12">
+          <div className="mb-4">
             <p className="text-[2.5rem] leading-[2.6rem] max-w-[28.125rem] mx-auto text-gray-700 mb-4">
               Descubra como você pode{" "}
               <span className="text-purple-600 font-bold">até duplicar suas vendas</span>{" "}
