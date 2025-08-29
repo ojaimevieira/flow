@@ -38,8 +38,7 @@ const Showcase = () => {
       tags: ["Marketing", "Restaurante", "Curso", "Rosa/Roxo"],
       status: "Novo",
       color: "from-pink-500 to-purple-500"
-    }
-    ,
+    },
     {
       id: 4,
       title: "Curso Edição de Imagens com IA",
@@ -50,6 +49,17 @@ const Showcase = () => {
       tags: ["IA", "Edição", "Imagens"],
       status: "Novo",
       color: "from-emerald-500 to-cyan-500"
+    },
+    {
+      id: 5,
+      title: "Template 1 - Edição de Vídeo com IA",
+      description: "Template completo para curso de edição de vídeos com IA - clone profissional",
+      category: "Vídeo/IA",
+      route: "/template-1",
+      thumbnail: "/api/placeholder/400/300",
+      tags: ["IA", "Vídeos", "CapCut", "Purple/Pink"],
+      status: "Novo",
+      color: "from-purple-600 to-pink-600"
     }
   ];
 
@@ -212,7 +222,7 @@ const Showcase = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">3</div>
+              <div className="text-3xl font-bold text-primary mb-2">5</div>
               <div className="text-muted-foreground">Templates Ativos</div>
             </div>
             <div>
