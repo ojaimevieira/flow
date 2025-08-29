@@ -76,6 +76,66 @@ const HeroSection = ({ heroBlobARef, heroBlobBRef }: HeroSectionProps) => {
           </Card>
         </div>
 
+        {/* Demonstração Visual Hero - Before/After */}
+        <div className="max-w-6xl mx-auto mt-16">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Antes */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-500/50 to-red-600/50 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+              <div className="relative bg-dark-card rounded-lg p-4">
+                <div className="text-center mb-4">
+                  <Badge className="bg-red-500 text-white">ANTES</Badge>
+                </div>
+                <div className="aspect-square rounded-lg overflow-hidden">
+                  <img 
+                    src="https://picsum.photos/500/500?random=100" 
+                    alt="Produto com fundo branco - antes da edição"
+                    className="w-full h-full object-cover grayscale"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://via.placeholder.com/500x500/cccccc/666666?text=Produto+Antes';
+                    }}
+                  />
+                </div>
+                <p className="text-center mt-4 text-muted-foreground">Foto simples com fundo branco</p>
+              </div>
+            </div>
+
+            {/* Depois */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/50 to-cyan-500/50 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+              <div className="relative bg-dark-card rounded-lg p-4">
+                <div className="text-center mb-4">
+                  <Badge className="bg-emerald-500 text-white">DEPOIS</Badge>
+                </div>
+                <div className="aspect-square rounded-lg overflow-hidden">
+                  <img 
+                    src="https://picsum.photos/500/500?random=200" 
+                    alt="Produto em cenário profissional - depois da edição"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://via.placeholder.com/500x500/22c55e/ffffff?text=Produto+Depois';
+                    }}
+                  />
+                </div>
+                <p className="text-center mt-4 text-foreground font-medium">Cenário profissional com IA</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Seta de transformação */}
+          <div className="flex justify-center mt-8">
+            <div className="flex items-center space-x-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center shadow-2xl motion-safe:animate-pulse">
+                <Wand2 className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-center">
+                <p className="text-sm text-muted-foreground">Transformação com IA</p>
+                <p className="font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Em segundos!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Hero */}
         <div className="pt-8">
           <Button size="lg" className="bg-gradient-to-r from-primary to-accent text-white px-8 py-4 text-lg shadow-2xl hover:shadow-neon transition-all duration-300 hover:scale-105">
