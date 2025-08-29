@@ -132,6 +132,34 @@ All colors MUST be HSL.
     --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.1);
     --glow-template: 0 2px 10px hsl(0 85% 54% / 0.3);
   }
+
+  /* TEMA RESTAURANTE-CURSO - Cores exatas da referência */
+  .theme-restaurante-curso {
+    --background: 0 0% 100%;              /* Fundo branco */
+    --foreground: 0 0% 13%;               /* Texto escuro */
+    --card: 0 0% 100%;                    /* Cards brancos */
+    --card-foreground: 0 0% 13%;
+    --border: 0 0% 90%;                   /* Bordas cinza claro */
+    
+    --template-primary: 330 100% 50%;     /* Rosa/Pink vibrante */
+    --template-secondary: 45 100% 60%;    /* Amarelo dourado */
+    --template-accent: 273 100% 45%;      /* Roxo */
+    --template-surface: 45 100% 95%;      /* Amarelo muito claro */
+    --template-surface-dark: 330 100% 95%; /* Rosa muito claro */
+    
+    /* Gradientes específicos da referência */
+    --gradient-primary: linear-gradient(135deg, hsl(330 100% 50%), hsl(273 100% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 60%), hsl(35 100% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(45 100% 95%), hsl(45 100% 85%));
+    --gradient-purple: linear-gradient(135deg, hsl(273 100% 45%), hsl(283 90% 40%));
+    --gradient-pink-purple: linear-gradient(135deg, hsl(330 100% 50%), hsl(273 100% 45%));
+    --gradient-yellow: linear-gradient(135deg, hsl(45 100% 60%), hsl(45 100% 50%));
+    
+    /* Sombras específicas */
+    --shadow-neon: 0 4px 20px hsl(330 100% 50% / 0.3);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.08);
+    --glow-template: 0 2px 10px hsl(330 100% 50% / 0.4);
+  }
 }
 
 @layer base {
