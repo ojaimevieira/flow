@@ -7,6 +7,7 @@ import Showcase from "./pages/Showcase";
 import GamingLanding from "./templates/gaming/pages/GamingLanding";
 import FilmAgenteLanding from "./templates/filmagente/pages/FilmAgenteLanding";
 import CorporateLanding from "./templates/corporate/pages/CorporateLanding";
+import DeliveryLanding from "./templates/delivery/pages/DeliveryLanding";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/original" element={<GamingLanding />} />
           <Route path="/film-example" element={<FilmAgenteLanding />} />
           <Route path="/corporate" element={<CorporateLanding />} />
+          <Route path="/delivery" element={<DeliveryLanding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

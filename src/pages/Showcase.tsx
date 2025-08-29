@@ -38,6 +38,17 @@ const Showcase = () => {
       tags: ["B2B", "Profissional", "Clean"],
       status: "Preview",
       color: "from-blue-400 to-indigo-600"
+    },
+    {
+      id: 4,
+      title: "Delivery Landing",
+      description: "Template inspirado no iFood para cursos de restaurantes e delivery",
+      category: "Delivery/Food",
+      route: "/delivery",
+      thumbnail: "/api/placeholder/400/300",
+      tags: ["iFood", "Delivery", "Restaurante", "Conversão"],
+      status: "Novo",
+      color: "from-red-500 to-yellow-500"
     }
   ];
 
@@ -200,7 +211,7 @@ const Showcase = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">3</div>
+              <div className="text-3xl font-bold text-primary mb-2">4</div>
               <div className="text-muted-foreground">Templates Ativos</div>
             </div>
             <div>

@@ -1,0 +1,125 @@
+/* Estilos específicos do template Delivery */
+
+/* Animações personalizadas para o tema delivery */
+@keyframes delivery-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px hsl(0 85% 54% / 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(0 85% 54% / 0.4), 0 0 30px hsl(0 85% 54% / 0.2);
+  }
+}
+
+@keyframes food-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.1);
+  }
+}
+
+@keyframes money-count {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    color: hsl(45 100% 50%);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Classes utilitárias específicas do delivery */
+.theme-delivery .delivery-pulse {
+  animation: delivery-pulse 2s ease-in-out infinite;
+}
+
+.theme-delivery .food-bounce {
+  animation: food-bounce 1.5s ease-in-out infinite;
+}
+
+.theme-delivery .money-count {
+  animation: money-count 0.8s ease-in-out;
+}
+
+/* Hover effects específicos */
+.theme-delivery .hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-delivery .hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px hsl(0 0% 0% / 0.15);
+}
+
+/* Gradientes específicos para elementos do delivery */
+.theme-delivery .gradient-delivery {
+  background: linear-gradient(135deg, hsl(0 85% 54%), hsl(0 85% 47%));
+}
+
+.theme-delivery .gradient-success {
+  background: linear-gradient(135deg, hsl(45 100% 50%), hsl(35 100% 50%));
+}
+
+/* Text effects */
+.theme-delivery .text-glow {
+  text-shadow: 0 0 10px hsl(0 85% 54% / 0.5);
+}
+
+.theme-delivery .text-money {
+  color: hsl(45 100% 50%);
+  font-weight: bold;
+}
+
+/* Card styles específicos */
+.theme-delivery .delivery-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px hsl(0 0% 0% / 0.08);
+  transition: all 0.3s ease;
+}
+
+.theme-delivery .delivery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px hsl(0 0% 0% / 0.12);
+}
+
+/* Button enhancements */
+.theme-delivery .btn-delivery-primary {
+  background: linear-gradient(135deg, hsl(0 85% 54%), hsl(0 85% 47%));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px hsl(0 85% 54% / 0.3);
+}
+
+.theme-delivery .btn-delivery-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px hsl(0 85% 54% / 0.4);
+}
+
+.theme-delivery .btn-delivery-secondary {
+  background: linear-gradient(135deg, hsl(45 100% 50%), hsl(35 100% 50%));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px hsl(45 100% 50% / 0.3);
+}
+
+.theme-delivery .btn-delivery-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px hsl(45 100% 50% / 0.4);
+}
