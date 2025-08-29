@@ -39,6 +39,18 @@ const Showcase = () => {
       status: "Novo",
       color: "from-pink-500 to-purple-500"
     }
+    ,
+    {
+      id: 4,
+      title: "Curso Edição de Imagens com IA",
+      description: "Template do curso de edição de imagens com IA",
+      category: "Design/IA",
+      route: "/edicao-imagens-ia",
+      thumbnail: "/api/placeholder/400/300",
+      tags: ["IA", "Edição", "Imagens"],
+      status: "Novo",
+      color: "from-emerald-500 to-cyan-500"
+    }
   ];
 
   return (
