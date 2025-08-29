@@ -24,6 +24,12 @@ import {
   Gift
 } from "lucide-react";
 
+// Import components
+import HeroSection from "../components/HeroSection";
+import PainsSection from "../components/PainsSection";
+import SolutionSection from "../components/SolutionSection";
+import GallerySection from "../components/GallerySection";
+
 const EdicaoImagensIALanding = () => {
   const sections = useMemo(
     () => [
@@ -380,184 +386,467 @@ const EdicaoImagensIALanding = () => {
         <hr className="border-border" />
 
         {/* Curriculum */}
-        <section id="curriculum" className="space-y-8" data-animate>
-          <h2 className="text-3xl font-bold">Curriculum</h2>
-          <h3 className="text-xl font-semibold">Conteúdo do curso</h3>
-          <div className="h-1 w-24 bg-gradient-to-r from-primary/60 to-accent/60 rounded-full" aria-hidden="true" />
-          <Card className="bg-dark-card/60 border-primary/20 transition-all duration-700 "
-            style={{ opacity: visible["curriculum"] ? 1 : 0, transform: visible["curriculum"] ? "translateY(0px)" : "translateY(12px)" }}
-          >
-            <CardContent className="pt-6 overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr>
-                    <th className="border-b border-border py-2 pr-4">Antes</th>
-                    <th className="border-b border-border py-2 pr-4">Depois</th>
-                    <th className="border-b border-border py-2">Técnica</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border-b border-border py-2 pr-4">Foto com fundo branco</td>
-                    <td className="border-b border-border py-2 pr-4">Ambiente de cervejaria</td>
-                    <td className="border-b border-border py-2">Alterar Cenário</td>
-                  </tr>
-                  <tr>
-                    <td className="border-b border-border py-2 pr-4">Iluminação básica</td>
-                    <td className="border-b border-border py-2 pr-4">Neon dramático</td>
-                    <td className="border-b border-border py-2">Alterar Iluminação</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 pr-4">Produto isolado</td>
-                    <td className="py-2 pr-4">Combo completo</td>
-                    <td className="py-2">Adicionar Elementos</td>
-                  </tr>
-                </tbody>
-              </table>
-            </CardContent>
-          </Card>
+        <section id="curriculum" className="py-20 bg-gradient-to-br from-primary/5 to-accent/5" data-animate>
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-6 border-primary text-primary text-lg px-6 py-2">
+                <CheckCircle className="w-4 h-4 mr-2" />
+                Curriculum
+              </Badge>
+              <h2 className="text-4xl md:text-6xl font-bold mb-8">
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Conteúdo Completo do Curso
+                </span>
+              </h2>
+              <div className="h-1 w-32 bg-gradient-to-r from-primary/60 to-accent/60 rounded-full mx-auto" />
+            </div>
 
-          <h3 className="text-xl font-semibold">Módulo introdutório</h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Foto perfeita com fundo branco</li>
-            <li>Configuração das ferramentas de IA</li>
-            <li>Primeiros passos com Nano Banana e Flux Context</li>
-          </ul>
+            <div 
+              className="space-y-16 transition-all duration-700"
+              style={{ 
+                opacity: visible["curriculum"] ? 1 : 0, 
+                transform: visible["curriculum"] ? "translateY(0px)" : "translateY(40px)" 
+              }}
+            >
+              {/* Tabela de conteúdo destacada */}
+              <div className="max-w-5xl mx-auto">
+                <h3 className="text-2xl font-semibold mb-8 text-center">Conteúdo do curso</h3>
+                <Card className="bg-dark-card/60 border-primary/20 shadow-2xl overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="overflow-x-auto">
+                      <table className="w-full">
+                        <thead className="bg-gradient-to-r from-primary/20 to-accent/20">
+                          <tr>
+                            <th className="px-6 py-4 text-left font-semibold">Antes</th>
+                            <th className="px-6 py-4 text-left font-semibold">Depois</th>
+                            <th className="px-6 py-4 text-left font-semibold">Técnica</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-border">
+                          <tr className="hover:bg-primary/5 transition-colors">
+                            <td className="px-6 py-4">Foto com fundo branco</td>
+                            <td className="px-6 py-4">Ambiente de cervejaria</td>
+                            <td className="px-6 py-4">
+                              <Badge className="bg-blue-500/20 text-blue-400 border-blue-400/30">
+                                Alterar Cenário
+                              </Badge>
+                            </td>
+                          </tr>
+                          <tr className="hover:bg-primary/5 transition-colors">
+                            <td className="px-6 py-4">Iluminação básica</td>
+                            <td className="px-6 py-4">Neon dramático</td>
+                            <td className="px-6 py-4">
+                              <Badge className="bg-purple-500/20 text-purple-400 border-purple-400/30">
+                                Alterar Iluminação
+                              </Badge>
+                            </td>
+                          </tr>
+                          <tr className="hover:bg-primary/5 transition-colors">
+                            <td className="px-6 py-4">Produto isolado</td>
+                            <td className="px-6 py-4">Combo completo</td>
+                            <td className="px-6 py-4">
+                              <Badge className="bg-green-500/20 text-green-400 border-green-400/30">
+                                Adicionar Elementos
+                              </Badge>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-          <h3 className="text-xl font-semibold">Técnicas</h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Superfícies e texturas</li>
-            <li>Cores e paredes</li>
-            <li>Bases para produtos</li>
-            <li>Efeitos dramáticos</li>
-            <li>Tons quentes vs frios</li>
-            <li>Iluminação neon</li>
-            <li>Ambientes gastronômicos</li>
-            <li>Contextos comerciais</li>
-            <li>Cenários temáticos</li>
-            <li>Adicionar e remover elementos</li>
-            <li>Expandir imagens</li>
-          </ul>
+              {/* Módulos em grid */}
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Módulo Introdutório */}
+                <Card className="bg-dark-card/60 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-xl">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center">
+                        <span className="text-primary font-bold">1</span>
+                      </div>
+                      Módulo introdutório
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        <span>Foto perfeita com fundo branco</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        <span>Configuração das ferramentas de IA</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                        <span>Primeiros passos com Nano Banana e Flux Context</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
 
-          <h3 className="text-xl font-semibold">Bônus</h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Guia de Templates: 20+ prompts com variáveis</li>
-            <li>Banco de 50+ Fundos</li>
-            <li>Sistema Notion completo</li>
-          </ul>
-        </section>
+                {/* Técnicas */}
+                <Card className="bg-dark-card/60 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-xl">
+                      <div className="w-10 h-10 bg-gradient-to-br from-accent/20 to-neon-pink/20 rounded-full flex items-center justify-center">
+                        <span className="text-accent font-bold">2</span>
+                      </div>
+                      Técnicas
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 gap-2 text-sm">
+                      {[
+                        "Superfícies e texturas", "Cores e paredes", "Bases para produtos",
+                        "Efeitos dramáticos", "Tons quentes vs frios", "Iluminação neon",
+                        "Ambientes gastronômicos", "Contextos comerciais", "Cenários temáticos",
+                        "Adicionar e remover elementos", "Expandir imagens"
+                      ].map((technique, i) => (
+                        <div key={i} className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-accent rounded-full"></div>
+                          <span>{technique}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
 
-        <hr className="border-border" />
-
-        {/* Offer */}
-        <section id="offer" className="space-y-6" data-animate>
-          <h2 className="text-3xl font-bold">Offer</h2>
-          <Card className="bg-dark-card/60 border-primary/20 transition-all duration-700 "
-            style={{ opacity: visible["offer"] ? 1 : 0, transform: visible["offer"] ? "translateY(0px)" : "translateY(12px)" }}
-          >
-            <CardContent className="pt-6 space-y-2">
-      <p className="bg-gradient-to-r from-amber-400 to-yellow-200 bg-clip-text text-transparent">Preço atual: R$ 47,00  •  Valor normal: R$ 297,00  •  Economia: R$ 250,00</p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Acesso vitalício completo</li>
-                <li>Todos os módulos + bônus</li>
-                <li>Suporte incluído</li>
-                <li>Updates gratuitos</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <h3 className="text-xl font-semibold">Por que vale a pena</h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Uma sessão fotográfica custa em média R$ 500–1500</li>
-            <li>O curso se paga com a primeira foto editada</li>
-            <li>ROI imediato para qualquer produto</li>
-          </ul>
-        </section>
-
-        <hr className="border-border" />
-
-        {/* Timeline */}
-        <section id="timeline" className="space-y-6" data-animate>
-          <h2 className="text-3xl font-bold">Timeline</h2>
-          <Card className="bg-dark-card/60 border-primary/20 transition-all duration-700 "
-            style={{ opacity: visible["timeline"] ? 1 : 0, transform: visible["timeline"] ? "translateY(0px)" : "translateY(12px)" }}
-          >
-            <CardContent className="pt-6 overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr>
-                    <th className="border-b border-border py-2 pr-4">Manhã</th>
-                    <th className="border-b border-border py-2 pr-4">Gravação das aulas + materiais</th>
-                    <th className="border-b border-border py-2">4h</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border-b border-border py-2 pr-4">Tarde</td>
-                    <td className="border-b border-border py-2 pr-4">Landing page + plataforma</td>
-                    <td className="border-b border-border py-2">4h</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 pr-4">Noite</td>
-                    <td className="py-2 pr-4">Testes + lançamento</td>
-                    <td className="py-2">2h</td>
-                  </tr>
-                </tbody>
-              </table>
-            </CardContent>
-          </Card>
-        </section>
-
-        <hr className="border-border" />
-
-        {/* Audience */}
-        <section id="audience" className="space-y-6" data-animate>
-          <h2 className="text-3xl font-bold">Audience</h2>
-          <div className="grid md:grid-cols-2 gap-6 transition-all duration-700 "
-            style={{ opacity: visible["audience"] ? 1 : 0, transform: visible["audience"] ? "translateY(0px)" : "translateY(12px)" }}
-          >
-            <Card className="bg-dark-card/60 border-primary/20">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold">Perfeito para você se</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Vende produtos físicos</li>
-                  <li>Quer fotos profissionais gastando pouco</li>
-                  <li>Precisa de vários cenários</li>
-                  <li>Quer autonomia</li>
-                  <li>Busca resultados rápidos</li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card className="bg-dark-card/60 border-primary/20">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold">Não é para você se</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Tem orçamento ilimitado para fotografia</li>
-                  <li>Não trabalha com produtos visuais</li>
-                  <li>Quer apenas teoria</li>
-                  <li>Não quer usar IA</li>
-                </ul>
-              </CardContent>
-            </Card>
+                {/* Bônus */}
+                <Card className="bg-dark-card/60 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-xl">
+                      <div className="w-10 h-10 bg-gradient-to-br from-neon-pink/20 to-primary/20 rounded-full flex items-center justify-center">
+                        <Gift className="w-5 h-5 text-neon-pink" />
+                      </div>
+                      Bônus
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-3">
+                      <li className="flex items-start space-x-3">
+                        <Star className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                        <span>Guia de Templates: 20+ prompts com variáveis</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <Star className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                        <span>Banco de 50+ Fundos</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <Star className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
+                        <span>Sistema Notion completo</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 
         <hr className="border-border" />
 
+        {/* Offer */}
+        <section id="offer" className="py-20" data-animate>
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-6 border-yellow-500/40 text-yellow-400 text-lg px-6 py-2">
+                <DollarSign className="w-4 h-4 mr-2" />
+                Offer
+              </Badge>
+              <h2 className="text-4xl md:text-6xl font-bold mb-8">
+                <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                  Oferta Especial
+                </span>
+              </h2>
+              <div className="h-1 w-32 bg-gradient-to-r from-yellow-500/60 to-orange-500/60 rounded-full mx-auto" />
+            </div>
+
+            <div 
+              className="max-w-4xl mx-auto transition-all duration-700"
+              style={{ 
+                opacity: visible["offer"] ? 1 : 0, 
+                transform: visible["offer"] ? "translateY(0px)" : "translateY(40px)" 
+              }}
+            >
+              {/* Preço principal em destaque */}
+              <Card className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border-yellow-500/30 shadow-2xl mb-12 overflow-hidden relative">
+                <div className="absolute top-0 right-0 bg-gradient-to-l from-red-500 to-red-600 text-white px-6 py-2 rounded-bl-lg">
+                  <span className="font-bold text-sm">ECONOMIA R$ 250</span>
+                </div>
+                <CardContent className="p-8 text-center">
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center justify-center space-x-4">
+                      <div className="text-center">
+                        <p className="text-sm text-muted-foreground">De</p>
+                        <p className="text-2xl line-through text-muted-foreground">R$ 297,00</p>
+                      </div>
+                      <div className="text-6xl font-bold">
+                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                          R$ 47
+                        </span>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-sm text-muted-foreground">Valor atual</p>
+                        <Badge className="bg-green-500 text-white">84% OFF</Badge>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                    {[
+                      { icon: CheckCircle, text: "Acesso vitalício completo" },
+                      { icon: Star, text: "Todos os módulos + bônus" },
+                      { icon: Users, text: "Suporte incluído" },
+                      { icon: TrendingUp, text: "Updates gratuitos" },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center space-x-2">
+                        <item.icon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span className="text-sm">{item.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* ROI Arguments */}
+              <div className="text-center space-y-6">
+                <h3 className="text-2xl font-semibold">Por que vale a pena</h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {[
+                    { 
+                      icon: DollarSign, 
+                      title: "R$ 500–1500", 
+                      subtitle: "Uma sessão fotográfica custa em média" 
+                    },
+                    { 
+                      icon: Zap, 
+                      title: "1ª foto editada", 
+                      subtitle: "O curso se paga com a primeira foto editada" 
+                    },
+                    { 
+                      icon: TrendingUp, 
+                      title: "ROI imediato", 
+                      subtitle: "ROI imediato para qualquer produto" 
+                    },
+                  ].map((item, i) => (
+                    <Card key={i} className="bg-dark-card/40 border-primary/20 p-6 text-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <item.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h4 className="font-bold text-lg text-primary mb-2">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground">{item.subtitle}</p>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>        <hr className="border-border" />
+
+        {/* Timeline */}
+        <section id="timeline" className="py-20 bg-gradient-to-br from-blue-500/5 to-indigo-500/5" data-animate>
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-6 border-blue-500/40 text-blue-400 text-lg px-6 py-2">
+                <Clock className="w-4 h-4 mr-2" />
+                Timeline
+              </Badge>
+              <h2 className="text-4xl md:text-6xl font-bold mb-8">
+                <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                  Cronograma do Dia
+                </span>
+              </h2>
+              <div className="h-1 w-32 bg-gradient-to-r from-blue-500/60 to-indigo-500/60 rounded-full mx-auto" />
+            </div>
+
+            <div 
+              className="max-w-4xl mx-auto transition-all duration-700"
+              style={{ 
+                opacity: visible["timeline"] ? 1 : 0, 
+                transform: visible["timeline"] ? "translateY(0px)" : "translateY(40px)" 
+              }}
+            >
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    period: "Manhã",
+                    activity: "Gravação das aulas + materiais",
+                    duration: "4h",
+                    icon: Camera,
+                    color: "from-yellow-400 to-orange-400",
+                    time: "08:00 - 12:00"
+                  },
+                  {
+                    period: "Tarde",
+                    activity: "Landing page + plataforma",
+                    duration: "4h",
+                    icon: Target,
+                    color: "from-blue-400 to-cyan-400",
+                    time: "13:00 - 17:00"
+                  },
+                  {
+                    period: "Noite",
+                    activity: "Testes + lançamento",
+                    duration: "2h",
+                    icon: Zap,
+                    color: "from-purple-400 to-pink-400",
+                    time: "19:00 - 21:00"
+                  },
+                ].map((item, i) => (
+                  <Card key={i} className="bg-dark-card/60 border-blue-500/30 hover:border-blue-400/50 transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
+                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.color}`} />
+                    <CardContent className="p-6 text-center">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${item.color} bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                        <item.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{item.period}</h3>
+                      <p className="text-sm text-blue-400 mb-4">{item.time}</p>
+                      <p className="text-foreground mb-4">{item.activity}</p>
+                      <Badge className={`bg-gradient-to-r ${item.color} text-white border-none`}>
+                        {item.duration}
+                      </Badge>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Audience */}
+        <section id="audience" className="py-20" data-animate>
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-6 border-green-500/40 text-green-400 text-lg px-6 py-2">
+                <UserCheck className="w-4 h-4 mr-2" />
+                Audience
+              </Badge>
+              <h2 className="text-4xl md:text-6xl font-bold mb-8">
+                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                  É Para Você?
+                </span>
+              </h2>
+              <div className="h-1 w-32 bg-gradient-to-r from-green-500/60 to-emerald-500/60 rounded-full mx-auto" />
+            </div>
+
+            <div 
+              className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto transition-all duration-700"
+              style={{ 
+                opacity: visible["audience"] ? 1 : 0, 
+                transform: visible["audience"] ? "translateY(0px)" : "translateY(40px)" 
+              }}
+            >
+              {/* Perfeito para você */}
+              <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:shadow-2xl">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-2xl text-green-400">
+                    <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-6 h-6 text-green-400" />
+                    </div>
+                    Perfeito para você se
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    {[
+                      "Vende produtos físicos",
+                      "Quer fotos profissionais gastando pouco",
+                      "Precisa de vários cenários",
+                      "Quer autonomia",
+                      "Busca resultados rápidos"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Não é para você */}
+              <Card className="bg-gradient-to-br from-red-500/10 to-orange-500/10 border-red-500/30 hover:border-red-400/50 transition-all duration-300 hover:shadow-2xl">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-2xl text-red-400">
+                    <div className="w-10 h-10 bg-red-500/20 rounded-full flex items-center justify-center">
+                      <AlertTriangle className="w-6 h-6 text-red-400" />
+                    </div>
+                    Não é para você se
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    {[
+                      "Tem orçamento ilimitado para fotografia",
+                      "Não trabalha com produtos visuais",
+                      "Quer apenas teoria",
+                      "Não quer usar IA"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start space-x-3">
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                        <span className="text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Urgency */}
-        <section id="urgency" className="space-y-6" data-animate>
-          <h2 className="text-3xl font-bold">Urgency</h2>
-          <Card className="bg-dark-card/60 border-primary/20 transition-all duration-700 "
-            style={{ opacity: visible["urgency"] ? 1 : 0, transform: visible["urgency"] ? "translateY(0px)" : "translateY(12px)" }}
-          >
-            <CardContent className="pt-6">
-              <p>Últimas horas • Primeiros 100 alunos por R$ 47 • Depois volta para R$ 297</p>
-            </CardContent>
-          </Card>
+        <section id="urgency" className="py-20 bg-gradient-to-br from-red-500/10 to-orange-500/10" data-animate>
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <Badge variant="outline" className="mb-6 border-red-500/40 text-red-400 text-lg px-6 py-2">
+                <Timer className="w-4 h-4 mr-2" />
+                Urgency
+              </Badge>
+              <h2 className="text-4xl md:text-6xl font-bold mb-8">
+                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                  Últimas Horas!
+                </span>
+              </h2>
+              <div className="h-1 w-32 bg-gradient-to-r from-red-500/60 to-orange-500/60 rounded-full mx-auto" />
+            </div>
+
+            <Card 
+              className="max-w-3xl mx-auto bg-gradient-to-br from-red-500/20 to-orange-500/20 border-red-500/30 shadow-2xl transition-all duration-700"
+              style={{ 
+                opacity: visible["urgency"] ? 1 : 0, 
+                transform: visible["urgency"] ? "translateY(0px)" : "translateY(40px)" 
+              }}
+            >
+              <CardContent className="p-8 text-center">
+                <div className="space-y-6">
+                  <div className="flex items-center justify-center space-x-4 text-xl">
+                    <Timer className="w-8 h-8 text-red-400 motion-safe:animate-pulse" />
+                    <span className="font-bold">Últimas horas</span>
+                    <Timer className="w-8 h-8 text-red-400 motion-safe:animate-pulse" />
+                  </div>
+                  
+                  <div className="text-2xl font-bold">
+                    <span className="text-red-400">Primeiros 100 alunos</span>
+                    <span className="text-foreground"> por </span>
+                    <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">R$ 47</span>
+                  </div>
+                  
+                  <div className="text-lg text-muted-foreground">
+                    Depois volta para <span className="line-through">R$ 297</span>
+                  </div>
+
+                  <div className="flex items-center justify-center space-x-2 mt-6">
+                    <div className="w-3 h-3 bg-red-400 rounded-full motion-safe:animate-pulse"></div>
+                    <div className="w-3 h-3 bg-red-400 rounded-full motion-safe:animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="w-3 h-3 bg-red-400 rounded-full motion-safe:animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </section>
 
         <hr className="border-border" />
