@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Showcase from "./pages/Showcase";
 import GamingLanding from "./templates/gaming/pages/GamingLanding";
 import FilmAgenteLanding from "./templates/filmagente/pages/FilmAgenteLanding";
-import DeliveryLanding from "./templates/delivery/pages/DeliveryLanding";
 import RestauranteCursoLanding from "./templates/restaurante-curso/pages/RestauranteCursoLanding";
 import NotFound from "./pages/NotFound";
 
@@ -22,7 +21,6 @@ const App = () => (
           <Route path="/" element={<Showcase />} />
           <Route path="/original" element={<GamingLanding />} />
           <Route path="/film-example" element={<FilmAgenteLanding />} />
-          <Route path="/delivery" element={<DeliveryLanding />} />
           <Route path="/restaurante-curso" element={<RestauranteCursoLanding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

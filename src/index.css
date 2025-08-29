@@ -97,33 +97,6 @@ All colors MUST be HSL.
     --template-surface-dark: 0 0% 4%;      /* Darker background */
   }
 
-  /* TEMA DELIVERY - Inspirado no iFood */
-  .theme-delivery {
-    --background: 0 0% 100%;              /* Fundo branco */
-    --foreground: 0 0% 13%;               /* Texto escuro */
-    --card: 0 0% 100%;                    /* Cards brancos */
-    --card-foreground: 0 0% 13%;
-    --border: 0 0% 90%;                   /* Bordas cinza claro */
-    
-    --template-primary: 0 85% 54%;        /* #EA1D2C - Vermelho iFood */
-    --template-secondary: 45 100% 50%;    /* #FFD700 - Amarelo dourado */
-    --template-accent: 273 100% 50%;      /* #8B00FF - Roxo vibrante */
-    --template-surface: 45 100% 95%;      /* Amarelo muito claro */
-    --template-surface-dark: 273 100% 95%; /* Roxo muito claro */
-    
-    /* Gradientes modernos para delivery */
-    --gradient-primary: linear-gradient(135deg, hsl(0 85% 54%), hsl(0 85% 47%));
-    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 50%), hsl(35 100% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(45 100% 95%), hsl(45 100% 85%));
-    --gradient-purple: linear-gradient(135deg, hsl(273 100% 50%), hsl(283 100% 45%));
-    --gradient-yellow-purple: linear-gradient(135deg, hsl(45 100% 50%), hsl(273 100% 50%));
-    
-    /* Sombras suaves para tema claro */
-    --shadow-neon: 0 4px 20px hsl(0 85% 54% / 0.2);
-    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.1);
-    --glow-template: 0 2px 10px hsl(0 85% 54% / 0.3);
-  }
-
   /* TEMA RESTAURANTE-CURSO - Cores exatas da referência */
   .theme-restaurante-curso {
     --background: 0 0% 100%;              /* Fundo branco */
