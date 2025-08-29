@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/shared/ui/button";
 import { ArrowRight, Shield, Clock, CheckCircle } from "lucide-react";
 
 const HeroFilm = () => {
