@@ -25,7 +25,7 @@ const HeroRestauranteCurso = () => {
   // Raio do anel (garante folga em relação ao logo, sem encostar)
   const radius = 170; // px
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-400 overflow-hidden">
+  <section className="relative min-h-screen bg-hero-radial overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-float"></div>
@@ -34,9 +34,9 @@ const HeroRestauranteCurso = () => {
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="text-center max-w-5xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto">
           {/* Main Headline - Menor */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-purple-600 mb-12 leading-tight">
+          <h1 className="text-[2.5rem] leading-[1.2] max-w-[37.5rem] mx-auto font-bold text-purple-600 mb-12">
             AUMENTE SEU FATURAMENTO <span className="text-purple-800">EM ATÉ 30%</span> ATRAINDO MAIS CLIENTES{" "}
             <span className="text-purple-800">TODOS OS DIAS!</span>
           </h1>
@@ -78,7 +78,7 @@ const HeroRestauranteCurso = () => {
 
           {/* Subtitle */}
           <div className="mb-12">
-            <p className="text-2xl md:text-3xl text-gray-700 mb-4">
+            <p className="text-[2.5rem] leading-[2.6rem] max-w-[28.125rem] mx-auto text-gray-700 mb-4">
               Descubra como você pode{" "}
               <span className="text-purple-600 font-bold">até duplicar suas vendas</span>{" "}
               investindo no{" "}

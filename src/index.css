@@ -252,6 +252,17 @@ All colors MUST be HSL.
   border-radius: 12px;
 }
 
+  /* Radial hero background: light center to darker outside */
+  .bg-hero-radial {
+    background: radial-gradient(
+      circle at center,
+      #fde047 0%,     /* yellow-400 (lighter center) */
+      #fbbf24 35%,    /* yellow-500 */
+      #f59e0b 70%,    /* amber-500 */
+      #d97706 100%    /* amber-600 (darker edges) */
+    );
+  }
+
 /* Animações específicas para restaurante-curso */
 @keyframes bounce-custom {
   0%, 20%, 53%, 80%, 100% {
