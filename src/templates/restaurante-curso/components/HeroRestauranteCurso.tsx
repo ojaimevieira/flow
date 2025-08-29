@@ -77,8 +77,8 @@ const HeroRestauranteCurso = () => {
           </div>
 
           {/* Subtitle */}
-          <div className="mb-4">
-            <p className="text-[2.5rem] leading-[2.6rem] max-w-[28.125rem] mx-auto text-gray-700 mb-4">
+          <div className="mb-8">
+            <p className="text-[2.5rem] leading-[2.6rem] max-w-[28.125rem] mx-auto text-gray-700 mb-8">
               Descubra como você pode{" "}
               <span className="text-purple-600 font-bold">até duplicar suas vendas</span>{" "}
               investindo no{" "}
@@ -87,10 +87,10 @@ const HeroRestauranteCurso = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="space-y-6">
-            <Button 
-              size="lg" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-12 py-4 text-xl font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+          <div className="space-y-8">
+            <Button
+              size="lg"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-6 md:px-12 py-4 text-xl font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-full md:w-auto max-w-full mx-auto"
             >
               🚀 QUERO APRENDER AGORA!
             </Button>

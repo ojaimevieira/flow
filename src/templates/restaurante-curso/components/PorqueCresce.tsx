@@ -105,9 +105,9 @@ const PorqueCresce = () => {
 
           {/* Bottom CTA */}
           <div className="text-center mt-12">
-            <Button 
-              size="lg" 
-              className="bg-template-secondary hover:bg-template-secondary/90 text-template-accent px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            <Button
+              size="lg"
+              className="bg-template-secondary hover:bg-template-secondary/90 text-template-accent px-6 md:px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-full md:w-auto max-w-full mx-auto"
             >
               ▶️ ASSISTIR AGORA
             </Button>

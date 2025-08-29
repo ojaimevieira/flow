@@ -100,9 +100,9 @@ const FilmPricing = () => {
 
               {/* CTA Section */}
               <div className="text-center space-y-6">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-primary hover:shadow-neon transition-all duration-300 text-xl px-16 py-6 rounded-full group animate-glow-pulse w-full md:w-auto"
+                <Button
+                  size="lg"
+                  className="bg-gradient-primary hover:shadow-neon transition-all duration-300 text-xl px-6 md:px-16 py-6 rounded-full group animate-glow-pulse w-full md:w-auto max-w-full mx-auto"
                 >
                   QUERO GARANTIR MINHA VAGA AGORA
                   <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />

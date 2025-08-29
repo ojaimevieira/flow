@@ -184,9 +184,9 @@ const OfertaCurso = () => {
                 Mais de 3.247 pessoas já se inscreveram nos últimos 7 dias.
               </p>
               
-              <Button 
-                size="lg" 
-                className="bg-template-primary hover:bg-template-primary/90 text-white px-16 py-4 text-2xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              <Button
+                size="lg"
+                className="bg-template-primary hover:bg-template-primary/90 text-white px-4 sm:px-8 lg:px-16 py-4 text-2xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
               >
                 💰 GARANTIR MINHA VAGA AGORA!
               </Button>

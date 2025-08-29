@@ -162,9 +162,9 @@ const SolutionDelivery = () => {
 
         {/* Final CTA */}
         <div className="text-center">
-          <Button 
-            size="lg" 
-            className="bg-template-primary hover:bg-template-accent text-white px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4"
+          <Button
+            size="lg"
+            className="bg-template-primary hover:bg-template-accent text-white px-6 md:px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full md:w-auto max-w-full mx-auto"
           >
             🚀 QUERO TRANSFORMAR MEU RESTAURANTE AGORA!
           </Button>

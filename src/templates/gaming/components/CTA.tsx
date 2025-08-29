@@ -48,9 +48,9 @@ const CTA = () => {
 
           {/* CTA Button */}
           <div className="mb-12">
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary hover:shadow-neon transition-all duration-300 text-xl px-12 py-6 group animate-glow-pulse"
+            <Button
+              size="lg"
+              className="bg-gradient-primary hover:shadow-neon transition-all duration-300 text-xl px-6 md:px-12 py-6 group animate-glow-pulse w-full md:w-auto max-w-full mx-auto"
             >
               🚀 Garantir Minha Vaga Agora - R$ 47,00
               <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />

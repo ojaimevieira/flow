@@ -180,9 +180,9 @@ const PricingDelivery = () => {
               Enquanto você pensa, seus concorrentes estão aplicando essas estratégias e roubando seus clientes.
             </p>
             
-            <Button 
-              size="lg" 
-              className="bg-template-secondary hover:bg-yellow-400 text-template-accent px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4"
+            <Button
+              size="lg"
+              className="bg-template-secondary hover:bg-yellow-400 text-template-accent px-6 md:px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full md:w-auto max-w-full mx-auto"
             >
               💰 SIM! QUERO TRANSFORMAR MEU RESTAURANTE
             </Button>
