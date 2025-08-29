@@ -32,18 +32,6 @@ temp/
 
 ## � **Exemplos de Uso:**
 
-### **Migração HTML:**
-```bash
-# Copiar site para temp/
-temp/
-├── index.html
-├── style.css
-├── script.js
-└── images/
-
-# Solicitar: "Migre os arquivos de src/temp/ para template-projeto"
-```
-
 ### **Template com Assets:**
 ```bash
 # Jogar referência + assets

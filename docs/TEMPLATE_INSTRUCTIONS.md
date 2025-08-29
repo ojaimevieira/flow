@@ -350,6 +350,11 @@ Manter estrutura: [SIM - só mudar estilo/conteúdo]
 Multiple templates do mesmo produto para testar qual converte melhor
 ```
 
+---
+
+## 📞 Suporte
+```
+
 ### **📋 8. MIGRAÇÃO HTML → REACT**
 
 ```
