@@ -25,16 +25,16 @@ const ProblemsDelivery = () => {
   ];
 
   return (
-    <section className="py-20 bg-template-surface">
+    <section className="py-20 bg-gradient-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             O QUE VOCÊ ESTÁ FAZENDO 
-            <span className="text-template-primary"> PARA LEMBRAR-SE DO SEU RESTAURANTE</span> 
+            <span className="text-template-secondary"> PARA LEMBRAR-SE DO SEU RESTAURANTE</span> 
             NO MOMENTO DA DECISÃO?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
             Por que meu restaurante CRESCE todos os meses enquanto outros FECHAM as portas? 
             Vou te mostrar exatamente o que estou fazendo de diferente...
           </p>
@@ -47,17 +47,17 @@ const ProblemsDelivery = () => {
             return (
               <div 
                 key={index} 
-                className="bg-white rounded-xl p-6 shadow-lg border border-red-100 hover:shadow-xl transition-all duration-300"
+                className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
-                  <div className="bg-template-primary/10 rounded-lg p-3 flex-shrink-0">
-                    <IconComponent className="w-6 h-6 text-template-primary" />
+                  <div className="bg-template-accent/10 rounded-lg p-3 flex-shrink-0">
+                    <IconComponent className="w-6 h-6 text-template-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground mb-2">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
                       {problem.title}
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-gray-600">
                       {problem.description}
                     </p>
                   </div>
@@ -68,15 +68,15 @@ const ProblemsDelivery = () => {
         </div>
 
         {/* Emotional Hook */}
-        <div className="bg-gradient-to-r from-template-primary to-template-accent rounded-2xl p-8 text-center text-white max-w-4xl mx-auto">
+        <div className="bg-template-secondary rounded-2xl p-8 text-center text-template-accent max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold mb-4">
             Se você se identificou com pelo menos 1 dessas situações...
           </h3>
-          <p className="text-xl mb-6 opacity-90">
+          <p className="text-xl mb-6">
             Então você PRECISA conhecer o método que já salvou mais de 500.000 restaurantes da falência!
           </p>
-          <div className="bg-white/20 rounded-lg p-4 max-w-2xl mx-auto">
-            <p className="text-lg font-medium">
+          <div className="bg-template-accent/20 rounded-lg p-4 max-w-2xl mx-auto">
+            <p className="text-lg font-medium text-template-accent">
               "O próprio iFood já falou que são mais de 200.000 restaurantes competindo por atenção. 
               Como você vai se destacar nessa multidão?"
             </p>

@@ -142,31 +142,31 @@ const TestimonialsDelivery = () => {
         </div>
 
         {/* Stats Summary */}
-        <div className="bg-gradient-to-r from-template-primary to-template-accent rounded-2xl p-8 text-white text-center">
+        <div className="bg-gradient-purple rounded-2xl p-8 text-white text-center">
           <h3 className="text-3xl font-bold mb-6">
             RESULTADOS COMPROVADOS EM TODO O BRASIL
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-4xl font-bold mb-2">500k+</div>
+              <div className="text-4xl font-bold mb-2 text-template-secondary">500k+</div>
               <div className="text-sm opacity-90">Restaurantes atendidos</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">89%</div>
+              <div className="text-4xl font-bold mb-2 text-template-secondary">89%</div>
               <div className="text-sm opacity-90">Aumentaram as vendas</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">19</div>
+              <div className="text-4xl font-bold mb-2 text-template-secondary">19</div>
               <div className="text-sm opacity-90">Dias para ver resultados</div>
             </div>
             <div>
-              <div className="text-4xl font-bold mb-2">200%</div>
+              <div className="text-4xl font-bold mb-2 text-template-secondary">200%</div>
               <div className="text-sm opacity-90">Aumento médio nas vendas</div>
             </div>
           </div>
 
-          <div className="mt-8 bg-white/20 rounded-lg p-4 max-w-2xl mx-auto">
+          <div className="mt-8 bg-template-secondary/20 rounded-lg p-4 max-w-2xl mx-auto">
             <p className="text-lg font-medium">
               "Não importa o tipo do seu restaurante, o método funciona para todos!"
             </p>

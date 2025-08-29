@@ -51,7 +51,7 @@ const FAQDelivery = () => {
   ];
 
   return (
-    <section className="py-20 bg-template-surface">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-16">
@@ -85,7 +85,7 @@ const FAQDelivery = () => {
         </div>
 
         {/* Still have questions */}
-        <div className="bg-gradient-to-r from-template-primary to-template-accent rounded-2xl p-8 text-center text-white mt-12">
+        <div className="bg-gradient-yellow-purple rounded-2xl p-8 text-center text-white mt-12">
           <h3 className="text-2xl font-bold mb-4">
             AINDA TEM ALGUMA DÚVIDA?
           </h3>

@@ -48,7 +48,7 @@ const PricingDelivery = () => {
 
         {/* Pricing Card */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-template-primary to-template-accent rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-gradient-yellow-purple rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-4 left-4 w-20 h-20 border-2 border-white/20 rounded-full"></div>
@@ -58,7 +58,7 @@ const PricingDelivery = () => {
 
             <div className="relative z-10">
               {/* Discount Badge */}
-              <div className="absolute -top-4 -right-4 bg-template-secondary rounded-full w-20 h-20 flex items-center justify-center shadow-xl">
+              <div className="absolute -top-4 -right-4 bg-template-primary rounded-full w-20 h-20 flex items-center justify-center shadow-xl">
                 <div className="text-center">
                   <div className="text-xl font-bold">-{discount}%</div>
                   <div className="text-xs">OFF</div>
@@ -123,14 +123,14 @@ const PricingDelivery = () => {
                   </div>
 
                   {/* Bonus Highlight */}
-                  <div className="bg-template-secondary/20 rounded-lg p-4 border border-template-secondary/30">
+                  <div className="bg-template-secondary/30 rounded-lg p-4 border border-template-secondary/50">
                     <div className="flex items-center gap-2 mb-2">
                       <Gift className="w-5 h-5 text-template-secondary" />
-                      <span className="font-bold">BÔNUS ESPECIAL:</span>
+                      <span className="font-bold text-template-secondary">BÔNUS ESPECIAL:</span>
                     </div>
                     <p className="text-sm">
                       Consultoria individual de 30 minutos comigo para analisar seu restaurante!
-                      <span className="block font-bold mt-1">(Valor: R$ 300,00)</span>
+                      <span className="block font-bold mt-1 text-template-secondary">(Valor: R$ 300,00)</span>
                     </p>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ const PricingDelivery = () => {
           </div>
 
           {/* Final CTA */}
-          <div className="bg-gradient-to-r from-template-primary to-template-accent rounded-2xl p-8 text-center text-white mt-12">
+          <div className="bg-gradient-primary rounded-2xl p-8 text-center text-white mt-12">
             <h3 className="text-3xl font-bold mb-4">
               NÃO DEIXE ESSA OPORTUNIDADE PASSAR!
             </h3>
@@ -182,7 +182,7 @@ const PricingDelivery = () => {
             
             <Button 
               size="lg" 
-              className="bg-white text-template-primary hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4"
+              className="bg-template-secondary hover:bg-yellow-400 text-template-accent px-12 py-4 text-xl font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4"
             >
               💰 SIM! QUERO TRANSFORMAR MEU RESTAURANTE
             </Button>

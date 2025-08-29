@@ -116,14 +116,16 @@ All colors MUST be HSL.
     
     --template-primary: 0 85% 54%;        /* #EA1D2C - Vermelho iFood */
     --template-secondary: 45 100% 50%;    /* #FFD700 - Amarelo dourado */
-    --template-accent: 0 85% 47%;         /* Tom mais escuro do vermelho */
-    --template-surface: 0 0% 98%;         /* Superfície quase branca */
-    --template-surface-dark: 0 0% 95%;    /* Cinza muito claro */
+    --template-accent: 273 100% 50%;      /* #8B00FF - Roxo vibrante */
+    --template-surface: 45 100% 95%;      /* Amarelo muito claro */
+    --template-surface-dark: 273 100% 95%; /* Roxo muito claro */
     
     /* Gradientes modernos para delivery */
     --gradient-primary: linear-gradient(135deg, hsl(0 85% 54%), hsl(0 85% 47%));
     --gradient-secondary: linear-gradient(135deg, hsl(45 100% 50%), hsl(35 100% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 85% 54% / 0.05), hsl(45 100% 50% / 0.05));
+    --gradient-hero: linear-gradient(135deg, hsl(45 100% 95%), hsl(45 100% 85%));
+    --gradient-purple: linear-gradient(135deg, hsl(273 100% 50%), hsl(283 100% 45%));
+    --gradient-yellow-purple: linear-gradient(135deg, hsl(45 100% 50%), hsl(273 100% 50%));
     
     /* Sombras suaves para tema claro */
     --shadow-neon: 0 4px 20px hsl(0 85% 54% / 0.2);

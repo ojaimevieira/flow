@@ -70,6 +70,8 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-purple': 'var(--gradient-purple)',
+				'gradient-yellow-purple': 'var(--gradient-yellow-purple)',
 			},
 			boxShadow: {
 				'neon': 'var(--shadow-neon)',

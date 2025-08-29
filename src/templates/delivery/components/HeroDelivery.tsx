@@ -3,10 +3,10 @@ import { Star, Clock, Shield, Zap } from "lucide-react";
 
 const HeroDelivery = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-template-surface via-white to-template-surface-dark overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-hero overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-template-secondary/20 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-template-accent/20 rounded-full blur-xl animate-float"></div>
         <div className="absolute top-40 right-20 w-40 h-40 bg-template-primary/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-20 left-1/3 w-28 h-28 bg-template-accent/20 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
