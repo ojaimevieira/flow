@@ -1,0 +1,178 @@
+/* Tema Gestão em Saúde - Estilos Customizados */
+
+.theme-gestao-saude {
+  /* Cores principais do tema */
+  --primary-blue: #2563eb;
+  --primary-cyan: #0891b2;
+  --primary-gray: #1f2937;
+  --accent-blue: #3b82f6;
+  --light-blue: #eff6ff;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-cyan) 100%);
+  --gradient-light: linear-gradient(135deg, var(--light-blue) 0%, #ffffff 100%);
+  
+  /* Animações customizadas */
+  --animation-duration: 0.3s;
+  --animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animações personalizadas */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Classes de animação */
+.theme-gestao-saude .animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.theme-gestao-saude .animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+.theme-gestao-saude .animate-slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+.theme-gestao-saude .animate-scale-in {
+  animation: scale-in 0.4s ease-out;
+}
+
+/* Efeitos de hover customizados */
+.theme-gestao-saude .card-hover {
+  transition: all var(--animation-duration) var(--animation-easing);
+}
+
+.theme-gestao-saude .card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Gradientes de fundo */
+.theme-gestao-saude .bg-hero-gradient {
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #f0f9ff 100%);
+}
+
+.theme-gestao-saude .bg-section-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* Botões customizados */
+.theme-gestao-saude .btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all var(--animation-duration) var(--animation-easing);
+}
+
+.theme-gestao-saude .btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+/* Cards com efeito glassmorphism */
+.theme-gestao-saude .glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Indicadores de progresso */
+.theme-gestao-saude .progress-bar {
+  background: var(--gradient-primary);
+  height: 4px;
+  border-radius: 2px;
+  transition: width 1s ease-in-out;
+}
+
+/* Efeitos de texto */
+.theme-gestao-saude .text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+  .theme-gestao-saude .mobile-optimized {
+    padding: 1rem;
+  }
+  
+  .theme-gestao-saude .mobile-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* Estados de loading */
+.theme-gestao-saude .skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Melhorias de acessibilidade */
+.theme-gestao-saude .focus-ring:focus {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+.theme-gestao-saude .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -60,6 +60,17 @@ const Showcase = () => {
       tags: ["IA", "Vídeos", "CapCut", "Purple/Pink"],
       status: "Novo",
       color: "from-purple-600 to-pink-600"
+    },
+    {
+      id: 6,
+      title: "Curso Gestão em Saúde",
+      description: "Template moderno e profissional para cursos de gestão hospitalar e clínica",
+      category: "Saúde/Gestão",
+      route: "/gestao-saude",
+      thumbnail: "/api/placeholder/400/300",
+      tags: ["Saúde", "Gestão", "Hospitalar", "Blue/Cyan"],
+      status: "Novo",
+      color: "from-blue-600 to-cyan-600"
     }
   ];
 
@@ -222,7 +233,7 @@ const Showcase = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">6</div>
+              <div className="text-3xl font-bold text-primary mb-2">7</div>
               <div className="text-muted-foreground">Templates Ativos</div>
             </div>
             <div>

@@ -9,6 +9,7 @@ import FilmAgenteLanding from "./templates/filmagente/pages/FilmAgenteLanding";
 import RestauranteCursoLanding from "./templates/restaurante-curso/pages/RestauranteCursoLanding";
 import EdicaoImagensIALanding from "./templates/edicao-imagens-ia/pages/EdicaoImagensIALanding";
 import Template1Landing from "./templates/template-1/pages/Template1Landing";
+import GestaoSaudeLanding from "./templates/gestao-saude/pages/GestaoSaudeLanding";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/restaurante-curso" element={<RestauranteCursoLanding />} />
           <Route path="/edicao-imagens-ia" element={<EdicaoImagensIALanding />} />
           <Route path="/template-1" element={<Template1Landing />} />
+          <Route path="/gestao-saude" element={<GestaoSaudeLanding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
