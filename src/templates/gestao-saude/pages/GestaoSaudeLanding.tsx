@@ -12,6 +12,7 @@ const GestaoSaudeLanding = () => {
     <div className="theme-gestao-saude min-h-screen bg-background">
       <HeroGestaoSaude />
       <BeneficiosGestao />
+      <EstatisticasGestao />
       <ModulosCurso />
       <DepoimentosGestao />
       <OfertaGestao />
