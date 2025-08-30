@@ -71,6 +71,17 @@ const Showcase = () => {
       tags: ["Saúde", "Gestão", "Hospitalar", "Blue/Cyan"],
       status: "Novo",
       color: "from-blue-600 to-cyan-600"
+    },
+    {
+      id: 7,
+      title: "Foto Produto IA Pro",
+      description: "Landing page para curso de fotos profissionais de produto usando IA - multiplicando vendas",
+      category: "IA/E-commerce",
+      route: "/foto-produto-ia",
+      thumbnail: "/api/placeholder/400/300",
+      tags: ["IA", "Fotografia", "E-commerce", "Vendas", "Emerald/Cyan"],
+      status: "Novo",
+      color: "from-emerald-600 to-cyan-600"
     }
   ];
 
@@ -233,7 +244,7 @@ const Showcase = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">7</div>
+              <div className="text-3xl font-bold text-primary mb-2">8</div>
               <div className="text-muted-foreground">Templates Ativos</div>
             </div>
             <div>

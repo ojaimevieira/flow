@@ -10,6 +10,7 @@ import RestauranteCursoLanding from "./templates/restaurante-curso/pages/Restaur
 import EdicaoImagensIALanding from "./templates/edicao-imagens-ia/pages/EdicaoImagensIALanding";
 import Template1Landing from "./templates/template-1/pages/Template1Landing";
 import GestaoSaudeLanding from "./templates/gestao-saude/pages/GestaoSaudeLanding";
+import FotoProdutoIALanding from "./templates/foto-produto-ia/pages/Index";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/edicao-imagens-ia" element={<EdicaoImagensIALanding />} />
           <Route path="/template-1" element={<Template1Landing />} />
           <Route path="/gestao-saude" element={<GestaoSaudeLanding />} />
+          <Route path="/foto-produto-ia" element={<FotoProdutoIALanding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
