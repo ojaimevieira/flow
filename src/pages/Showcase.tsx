@@ -164,12 +164,14 @@ const Showcase = () => {
 
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Link to={project.route}>
-                      <Button size="lg" className="bg-gradient-primary hover:shadow-neon">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Ver Página
-                      </Button>
-                    </Link>
+                    <Button 
+                      size="lg" 
+                      className="bg-gradient-primary hover:shadow-neon"
+                      onClick={() => window.open(project.route, '_blank')}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Ver Página
+                    </Button>
                   </div>
                 </div>
 
@@ -203,15 +205,14 @@ const Showcase = () => {
                   </div>
 
                   {/* CTA */}
-                  <Link to={project.route} className="block">
-                    <Button 
-                      variant="outline" 
-                      className="w-full border-primary/30 text-primary hover:bg-primary/10 hover:shadow-glow transition-all duration-300 group"
-                    >
-                      <Eye className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                      Visualizar Template
-                    </Button>
-                  </Link>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-primary/30 text-primary hover:bg-primary/10 hover:shadow-glow transition-all duration-300 group"
+                    onClick={() => window.open(project.route, '_blank')}
+                  >
+                    <Eye className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                    Visualizar Template
+                  </Button>
                 </CardContent>
               </Card>
             ))}
