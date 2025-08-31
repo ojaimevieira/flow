@@ -82,6 +82,17 @@ const Showcase = () => {
       tags: ["IA", "Fotografia", "E-commerce", "Vendas", "Emerald/Cyan"],
       status: "Novo",
       color: "from-emerald-600 to-cyan-600"
+    },
+    {
+      id: 8,
+      title: "Jaime Vieira Portfolio",
+      description: "Landing page minimalista com foco no domínio e redes sociais - design clean e profissional",
+      category: "Portfolio/Pessoal",
+      route: "/jaimevieira",
+      thumbnail: "/api/placeholder/400/300",
+      tags: ["Portfolio", "Minimal", "Social Media", "Purple/Blue"],
+      status: "Novo",
+      color: "from-purple-600 to-blue-600"
     }
   ];
 
@@ -245,7 +256,7 @@ const Showcase = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">8</div>
+              <div className="text-3xl font-bold text-primary mb-2">9</div>
               <div className="text-muted-foreground">Templates Ativos</div>
             </div>
             <div>
