@@ -21,14 +21,14 @@ const TEMPLATES = [
 const CONFIG = {
   baseUrl: 'http://localhost:8080',
   captureViewport: { width: 1200, height: 800 },
-  thumbnailSize: { width: 400, height: 267 },
+  thumbnailSize: { width: 1200, height: 800 },
   outputDir: path.join(__dirname, '..', 'public', 'thumbs'),
   webpQuality: 80
 };
 
 const browser = await chromium.launch({ headless: true });
 
-console.log('🚀 Gerando Thumbnails Otimizadas 400x267px...\n');
+console.log('🚀 Gerando Thumbnails 1200x800px em WEBP...\n');
 
 for (const template of TEMPLATES) {
   try {
@@ -46,18 +46,14 @@ for (const template of TEMPLATES) {
     // Capturar como buffer
     const pngBuffer = await page.screenshot({ type: 'png', fullPage: false });
     
-    // Converter e redimensionar
+    // Converter para WEBP mantendo tamanho original
     const webpPath = path.join(CONFIG.outputDir, `${template.id}.webp`);
     await sharp(pngBuffer)
-      .resize(CONFIG.thumbnailSize.width, CONFIG.thumbnailSize.height, {
-        fit: 'cover',
-        position: 'top'
-      })
       .webp({ quality: CONFIG.webpQuality })
       .toFile(webpPath);
     
     const size = Math.round(fs.statSync(webpPath).size / 1024);
-    console.log(`✅ ${template.id} → 400x267 → ${size}KB`);
+    console.log(`✅ ${template.id} → 1200x800 → ${size}KB`);
     
     await page.close();
   } catch (e) {
@@ -79,4 +75,4 @@ files.forEach(file => {
 });
 
 console.log(`\n🎯 Total: ${totalKB}KB (média: ${Math.round(totalKB / files.length)}KB)`);
-console.log('📐 Dimensões: 400x267px - PERFEITO para thumbnails!');
+console.log('📐 Dimensões: 1200x800px - Tamanho original mantido!');
