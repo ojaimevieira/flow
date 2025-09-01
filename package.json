@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "thumbs": "node scripts/generate-thumbnails.js",
-    "thumbs:dev": "npm run dev & sleep 10 && npm run thumbs"
+    "thumbs:dev": "npm run dev & sleep 10 && npm run thumbs",
+    "assets:create": "node scripts/create-fallback-images.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
