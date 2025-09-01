@@ -3,99 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/shared/ui/card";
 import { Badge } from "@/shared/ui/badge";
 import { ExternalLink, Eye, Code, Palette } from "lucide-react";
 import { Link } from "react-router-dom";
+import { TEMPLATES } from "@/data/templates";
 
 const Showcase = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "Landing Page Gaming",
-      description: "Template de curso/produto com design gaming e elementos neon",
-      category: "Curso Online",
-      route: "/original",
-      thumbnail: "/api/placeholder/400/300",
-      tags: ["React", "TypeScript", "Tailwind", "Gaming"],
-      status: "Concluído",
-      color: "from-blue-500 to-purple-600"
-    },
-    {
-      id: 2,
-      title: "FilmAgente Style",
-      description: "Landing page inspirada no FilmAgente para cursos de criação de vídeos com IA",
-      category: "Vídeo/IA",
-      route: "/film-example",
-      thumbnail: "/api/placeholder/400/300",
-      tags: ["IA", "Vídeos", "Storytelling"],
-      status: "Novo",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      id: 3,
-      title: "Restaurante Curso",
-      description: "Landing page completa para curso sobre marketing de restaurantes",
-      category: "Educação/Food",
-      route: "/restaurante-curso",
-      thumbnail: "/api/placeholder/400/300", 
-      tags: ["Marketing", "Restaurante", "Curso", "Rosa/Roxo"],
-      status: "Novo",
-      color: "from-pink-500 to-purple-500"
-    },
-    {
-      id: 4,
-      title: "Curso Edição de Imagens com IA",
-      description: "Template do curso de edição de imagens com IA",
-      category: "Design/IA",
-      route: "/edicao-imagens-ia",
-      thumbnail: "/api/placeholder/400/300",
-      tags: ["IA", "Edição", "Imagens"],
-      status: "Novo",
-      color: "from-emerald-500 to-cyan-500"
-    },
-    {
-      id: 5,
-      title: "Template 1 - Edição de Vídeo com IA",
-      description: "Template completo para curso de edição de vídeos com IA - clone profissional",
-      category: "Vídeo/IA",
-      route: "/template-1",
-      thumbnail: "/api/placeholder/400/300",
-      tags: ["IA", "Vídeos", "CapCut", "Purple/Pink"],
-      status: "Novo",
-      color: "from-purple-600 to-pink-600"
-    },
-    {
-      id: 6,
-      title: "Curso Gestão em Saúde",
-      description: "Template moderno e profissional para cursos de gestão hospitalar e clínica",
-      category: "Saúde/Gestão",
-      route: "/gestao-saude",
-      thumbnail: "/api/placeholder/400/300",
-      tags: ["Saúde", "Gestão", "Hospitalar", "Blue/Cyan"],
-      status: "Novo",
-      color: "from-blue-600 to-cyan-600"
-    },
-    {
-      id: 7,
-      title: "Foto Produto IA Pro",
-      description: "Landing page para curso de fotos profissionais de produto usando IA - multiplicando vendas",
-      category: "IA/E-commerce",
-      route: "/foto-produto-ia",
-      thumbnail: "/api/placeholder/400/300",
-      tags: ["IA", "Fotografia", "E-commerce", "Vendas", "Emerald/Cyan"],
-      status: "Novo",
-      color: "from-emerald-600 to-cyan-600"
-    },
-    {
-      id: 8,
-      title: "Jaime Vieira Portfolio",
-      description: "Landing page minimalista com foco no domínio e redes sociais - design clean e profissional",
-      category: "Portfolio/Pessoal",
-      route: "/jaimevieira",
-      thumbnail: "/api/placeholder/400/300",
-      tags: ["Portfolio", "Minimal", "Social Media", "Purple/Blue"],
-      status: "Novo",
-      color: "from-purple-600 to-blue-600"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-darker-bg via-background to-dark-card">
       {/* Header */}
@@ -146,29 +56,50 @@ const Showcase = () => {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {projects.map((project) => (
+            {TEMPLATES.map((template) => (
               <Card 
-                key={project.id} 
+                key={template.id} 
                 className="bg-dark-card border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-glow group overflow-hidden"
               >
                 <div className="relative">
                   {/* Thumbnail */}
                   <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-r ${project.color} opacity-20`} />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center space-y-2">
-                        <Eye className="w-12 h-12 text-white/80 mx-auto" />
-                        <p className="text-white/60 text-sm">Preview em breve</p>
-                      </div>
-                    </div>
+                    <img 
+                      src={template.thumb}
+                      alt={`Preview de ${template.name}`}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      onError={(e) => {
+                        // Fallback para gradiente se imagem não carregar
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = `
+                            <div class="absolute inset-0 bg-gradient-to-r ${template.color} opacity-20"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                              <div class="text-center space-y-2">
+                                <svg class="w-12 h-12 text-white/80 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                </svg>
+                                <p class="text-white/60 text-sm">Preview em breve</p>
+                              </div>
+                            </div>
+                          `;
+                        }
+                      }}
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-r ${template.color} opacity-20`} />
                     
                     {/* Status Badge */}
                     <div className="absolute top-4 right-4">
                       <Badge 
-                        variant={project.status === 'Novo' ? 'default' : 'secondary'}
-                        className={project.status === 'Novo' ? 'bg-green-500 hover:bg-green-600' : ''}
+                        variant={template.status === 'Novo' ? 'default' : 'secondary'}
+                        className={template.status === 'Novo' ? 'bg-green-500 hover:bg-green-600' : ''}
                       >
-                        {project.status}
+                        {template.status}
                       </Badge>
                     </div>
                   </div>
@@ -178,7 +109,7 @@ const Showcase = () => {
                     <Button 
                       size="lg" 
                       className="bg-gradient-primary hover:shadow-neon"
-                      onClick={() => window.open(project.route, '_blank')}
+                      onClick={() => window.open(template.href, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Ver Página
@@ -189,22 +120,22 @@ const Showcase = () => {
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
                     <Badge variant="outline" className="text-xs">
-                      {project.category}
+                      {template.category}
                     </Badge>
                   </div>
                   <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
-                    {project.title}
+                    {template.name}
                   </CardTitle>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {project.description}
+                    {template.description}
                   </p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
+                    {template.tags.map((tag) => (
                       <Badge 
                         key={tag} 
                         variant="secondary" 
@@ -219,7 +150,7 @@ const Showcase = () => {
                   <Button 
                     variant="outline" 
                     className="w-full border-primary/30 text-primary hover:bg-primary/10 hover:shadow-glow transition-all duration-300 group"
-                    onClick={() => window.open(project.route, '_blank')}
+                    onClick={() => window.open(template.href, '_blank')}
                   >
                     <Eye className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                     Visualizar Template
@@ -256,7 +187,7 @@ const Showcase = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">8</div>
+              <div className="text-3xl font-bold text-primary mb-2">{TEMPLATES.length}</div>
               <div className="text-muted-foreground">Templates Ativos</div>
             </div>
             <div>
