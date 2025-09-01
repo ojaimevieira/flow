@@ -1,6 +1,6 @@
 import { Button } from "@/shared/ui/button";
 import { ArrowRight, Play, Clock, Users } from "lucide-react";
-import heroImage from "@/assets/hero-product-editing.jpg";
+import heroImage from "@/assets/gaming/hero-product-editing.jpg";
 
 const Hero = () => {
   return (

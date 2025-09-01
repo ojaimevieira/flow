@@ -1,7 +1,7 @@
 import { Button } from "@/shared/ui/button";
 
 // Import da imagem
-import logoVendaoComida from "@/assets/marca_venda-mais-comida-insta-nc.png";
+import logoVendaoComida from "@/assets/restaurante/marca_venda-mais-comida-insta-nc.png";
 
 const HeroRestauranteCurso = () => {
   // Distribuição dos emojis em anel, em graus (0° = direita; -90° = topo)
