@@ -5,10 +5,6 @@ import heroImage from "@/assets/hero-product-editing.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-darker-bg via-background to-dark-card">
-      {/* Label do Componente */}
-      <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-xs font-mono backdrop-blur-sm border border-white/20 z-50">
-        📄 Hero.tsx
-      </div>
       
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">

@@ -54,12 +54,7 @@ export const Hero1 = ({
             {handle}
           </p>
           
-          {/* Badge de identificação */}
-          <div className="mt-6">
-            <span className="bg-[hsl(var(--template-primary))]/20 text-[hsl(var(--template-primary))] px-3 py-1 rounded-full text-sm font-mono border border-[hsl(var(--template-primary))]/30">
-              📄 Hero1.tsx
-            </span>
-          </div>
+
         </CardContent>
       </Card>
     </div>

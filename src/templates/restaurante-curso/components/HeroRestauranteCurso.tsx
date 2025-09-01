@@ -26,10 +26,6 @@ const HeroRestauranteCurso = () => {
   const radius = 170; // px
   return (
   <section className="relative min-h-screen bg-hero-radial overflow-hidden">
-      {/* Label do Componente */}
-      <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-xs font-mono backdrop-blur-sm border border-white/20 z-50">
-        📄 HeroRestauranteCurso.tsx
-      </div>
       
       {/* Background Elements */}
       <div className="absolute inset-0">

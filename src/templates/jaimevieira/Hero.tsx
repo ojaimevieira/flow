@@ -4,10 +4,6 @@ import { Instagram, Facebook } from "lucide-react";
 export const Hero = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-6 relative">
-      {/* Label do Componente */}
-      <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-xs font-mono backdrop-blur-sm border border-white/20 z-50">
-        📄 Hero.tsx
-      </div>
       
       <Card className="bg-black/20 backdrop-blur-sm border-purple-500/30 shadow-2xl">
         <CardContent className="p-12 text-center">

@@ -267,7 +267,7 @@ const Showcase = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-primary mb-2">10</div>
+              <div className="text-3xl font-bold text-primary mb-2">9</div>
               <div className="text-muted-foreground">Templates Ativos</div>
             </div>
             <div>

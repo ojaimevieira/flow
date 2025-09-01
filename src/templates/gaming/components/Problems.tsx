@@ -43,10 +43,6 @@ const problems = [
 const Problems = () => {
   return (
     <section className="relative py-20 bg-gradient-to-b from-background to-darker-bg">
-      {/* Label do Componente */}
-      <div className="absolute top-4 right-4 bg-black/50 text-white px-2 py-1 rounded text-xs font-mono backdrop-blur-sm border border-white/20 z-50">
-        📄 Problems.tsx
-      </div>
       
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
