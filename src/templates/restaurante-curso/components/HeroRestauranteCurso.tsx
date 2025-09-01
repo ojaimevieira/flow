@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/shared/ui/button";
 
 // Import da imagem
 import logoVendaoComida from "@/assets/marca_venda-mais-comida-insta-nc.png";

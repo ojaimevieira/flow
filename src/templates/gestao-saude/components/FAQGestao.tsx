@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+} from "@/shared/ui/accordion";
+import { Button } from "@/shared/ui/button";
 
 const FAQGestao = () => {
   const faqs = [

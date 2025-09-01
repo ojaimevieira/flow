@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/shared/ui/card";
 import { DollarSign, Clock, Camera, Building, Palette, TrendingDown } from "lucide-react";
 
 const problems = [
