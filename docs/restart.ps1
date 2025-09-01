@@ -1,4 +1,4 @@
-# Script para reiniciar o servidor de desenvolvimento
+# Script para reiniciar o servidor de desenvolvimento PERSISTENTE
 Write-Host "🔄 Reiniciando servidor de desenvolvimento..." -ForegroundColor Cyan
 
 # 1. Para todos os processos Node.js
@@ -16,50 +16,46 @@ catch {
     Write-Host "⚠️  Erro ao parar processos Node.js: $($_.Exception.Message)" -ForegroundColor Yellow
 }
 
-# 2. Limpa jobs PowerShell antigos
-Write-Host "2️⃣ Limpando jobs antigos..." -ForegroundColor Yellow
+# 2. Aguarda um pouco para liberação de porta
+Write-Host "2️⃣ Aguardando liberação de porta..." -ForegroundColor Yellow
+Start-Sleep -Seconds 3
+
+# 3. Volta para o diretório raiz do projeto
+Set-Location "E:\Github\flow"
+Write-Host "📂 Diretório: $(Get-Location)" -ForegroundColor Gray
+
+# 4. Inicia servidor em processo persistente
+Write-Host "3️⃣ Iniciando servidor persistente..." -ForegroundColor Yellow
+
 try {
-    Get-Job -ErrorAction SilentlyContinue | Remove-Job -Force -ErrorAction SilentlyContinue
-    Write-Host "✅ Jobs limpos" -ForegroundColor Green
-}
-catch {
-    Write-Host "ℹ️  Nenhum job para limpar" -ForegroundColor Cyan
-}
-
-# 3. Aguarda um pouco
-Write-Host "3️⃣ Aguardando 2 segundos..." -ForegroundColor Yellow
-Start-Sleep -Seconds 2
-
-# 4. Inicia o servidor diretamente no terminal atual
-Write-Host "4️⃣ Iniciando servidor..." -ForegroundColor Yellow
-
-# Usa Start-Job de forma mais robusta
-try {
-    $job = Start-Job -ScriptBlock {
-        Set-Location $args[0]
-        & npm run dev
-    } -ArgumentList (Get-Location).Path
+    # Usa cmd para executar npm de forma persistente
+    $process = Start-Process -FilePath "cmd" -ArgumentList "/c", "npm run dev" -WindowStyle Hidden -PassThru
     
     # Aguarda o servidor iniciar
     Write-Host "⏳ Aguardando servidor iniciar..." -ForegroundColor Yellow
-    Start-Sleep -Seconds 6
+    Start-Sleep -Seconds 8
     
-    # Verifica se iniciou com sucesso
-    $serverRunning = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue
+    # Verifica se iniciou com sucesso (tenta várias portas)
+    $serverRunning = $null
+    $port = 8080
+    
+    for ($i = 0; $i -lt 5; $i++) {
+        $serverRunning = Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue
+        if ($serverRunning) {
+            break
+        }
+        $port++
+    }
+    
     if ($serverRunning) {
         Write-Host "✅ Servidor reiniciado com sucesso!" -ForegroundColor Green
-        Write-Host "📍 Local:   http://localhost:8080/" -ForegroundColor Cyan
-        Write-Host "🌐 Network: http://192.168.1.4:8080/" -ForegroundColor Cyan
-        Write-Host "🔢 Job ID:  $($job.Id)" -ForegroundColor White
+        Write-Host "📍 Local:   http://localhost:$port/" -ForegroundColor Cyan
+        Write-Host "🌐 Network: http://192.168.1.4:$port/" -ForegroundColor Cyan
+        Write-Host "🔢 PID:     $($process.Id)" -ForegroundColor White
+        Write-Host "💡 Servidor rodando de forma PERSISTENTE" -ForegroundColor Magenta
     } else {
         Write-Host "❌ Servidor pode não ter iniciado corretamente" -ForegroundColor Red
-        Write-Host "💡 Verificando status do job..." -ForegroundColor Yellow
-        $jobState = Get-Job -Id $job.Id
-        Write-Host "Job Status: $($jobState.State)" -ForegroundColor Gray
-        if ($jobState.State -eq "Failed") {
-            Write-Host "Erro do Job:" -ForegroundColor Red
-            Receive-Job -Id $job.Id -ErrorAction SilentlyContinue
-        }
+        Write-Host "💡 Verifique se há erros no package.json" -ForegroundColor Yellow
     }
 }
 catch {
