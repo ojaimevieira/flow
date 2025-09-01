@@ -12,6 +12,7 @@ import Template1Landing from "./templates/template-1/pages/Template1Landing";
 import GestaoSaudeLanding from "./templates/gestao-saude/pages/GestaoSaudeLanding";
 import FotoProdutoIALanding from "./templates/foto-produto-ia/pages/Index";
 import JaimeVieiraLanding from "./templates/jaimevieira/pages/JaimeVieiraLanding";
+import ImoveisSawalaLanding from "./templates/imoveis-sawala/pages/ImoveisSawalaLanding";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/gestao-saude" element={<GestaoSaudeLanding />} />
           <Route path="/foto-produto-ia" element={<FotoProdutoIALanding />} />
           <Route path="/jaimevieira" element={<JaimeVieiraLanding />} />
+          <Route path="/imoveis-sawala" element={<ImoveisSawalaLanding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

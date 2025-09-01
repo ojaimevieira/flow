@@ -97,6 +97,34 @@ All colors MUST be HSL.
     --template-surface-dark: 0 0% 4%;      /* Darker background */
   }
 
+  /* TEMA IMÓVEIS SAWALA - Elegante e corporativo */
+  .theme-imoveis-sawala {
+    /* Cores principais do tema */
+    --template-primary: 212 100% 55%;      /* Azul corporativo #1e3a8a */
+    --template-secondary: 43 96% 56%;      /* Dourado luxo #f59e0b */
+    --template-accent: 220 13% 26%;        /* Cinza sofisticado #374151 */
+    --template-surface: 220 13% 97%;       /* Azul muito claro #eff6ff */
+    --template-surface-dark: 222 84% 5%;   /* Azul escuro #0f172a */
+    
+    /* Gradientes específicos */
+    --gradient-primary: linear-gradient(135deg, hsl(212 100% 55%), hsl(43 96% 56%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 13% 97%), hsl(0 0% 100%));
+    --gradient-hero: linear-gradient(135deg, hsl(212 100% 55% / 0.1), hsl(43 96% 56% / 0.1));
+    
+    /* Sombras elegantes */
+    --shadow-neon: 0 0 30px hsl(212 100% 55% / 0.2);
+    --shadow-card: 0 4px 20px hsl(220 13% 26% / 0.1);
+    --glow-template: 0 0 20px hsl(212 100% 55% / 0.3);
+    
+    /* Override shadcn colors para o tema */
+    --primary: 212 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 220 13% 26%;
+    --accent-foreground: 0 0% 100%;
+  }
+
   /* TEMA RESTAURANTE-CURSO - Cores exatas da referência */
   .theme-restaurante-curso {
     --background: 0 0% 100%;              /* Fundo branco */

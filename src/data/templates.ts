@@ -98,5 +98,16 @@ export const TEMPLATES: Template[] = [
     tags: ['Portfolio', 'Minimal', 'Social Media', 'Purple/Blue'],
     status: 'Novo',
     color: 'from-purple-600 to-blue-600'
+  },
+  {
+    id: 'imoveis-sawala',
+    name: 'Lançamento Imobiliário Sawala',
+    description: 'Landing page elegante para lançamentos imobiliários de alto padrão - Laranjeiras',
+    category: 'Imóveis/Corporativo',
+    href: '/imoveis-sawala',
+    thumb: '/thumbs/imoveis-sawala.webp',
+    tags: ['Imóveis', 'Corporativo', 'Elegante', 'Blue/Gold'],
+    status: 'Novo',
+    color: 'from-blue-600 to-amber-600'
   }
 ];

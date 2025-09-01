@@ -31,6 +31,11 @@ const templateColors = {
     primary: '#ef4444',
     secondary: '#dc2626',
     accent: '#b91c1c'
+  },
+  'imoveis-sawala': {
+    primary: '#1e3a8a',
+    secondary: '#f59e0b',
+    accent: '#374151'
   }
 };
 
@@ -125,6 +130,17 @@ async function createFallbackImages() {
     path.join(filmDir, 'background.webp'));
   
   console.log('✅ Criadas imagens para filmagente');
+
+  // Imoveis Sawala
+  const imoveisDir = path.join(assetsDir, 'imoveis-sawala');
+  if (!fs.existsSync(imoveisDir)) fs.mkdirSync(imoveisDir, { recursive: true });
+  
+  await createGradientImage(800, 600, templateColors['imoveis-sawala'], 
+    path.join(imoveisDir, 'hero-building.webp'));
+  await createTextImage(200, 50, 'sawala', templateColors['imoveis-sawala'], 
+    path.join(imoveisDir, 'logo-sawala.webp'));
+  
+  console.log('✅ Criadas imagens para imoveis-sawala');
 }
 
 createFallbackImages()
