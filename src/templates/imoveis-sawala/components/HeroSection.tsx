@@ -77,26 +77,37 @@ const HeroSection = () => {
             </div>
 
             {/* Features - Redondos com padding menor */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 max-w-3xl mx-auto animate-slide-up-delayed mt-10 md:mt-12">
-              <div className="bg-black/40 backdrop-blur-sm border border-blue-400/30 rounded-full w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-3 max-w-3xl mx-auto animate-slide-up-delayed mt-10 md:mt-12">
+              <div className="bg-black/40 backdrop-blur-sm border border-blue-400/30 rounded-full w-20 h-20 md:w-24 md:h-24 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
                 <Building2 className="w-5 h-5 text-amber-400 mb-1" />
                 <span className="text-white font-medium text-xs text-center leading-tight">Studios a<br/>3 Quartos</span>
               </div>
-              <div className="bg-black/40 backdrop-blur-sm border border-amber-400/30 rounded-full w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
+              <div className="bg-black/40 backdrop-blur-sm border border-amber-400/30 rounded-full w-20 h-20 md:w-24 md:h-24 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
                 <Car className="w-5 h-5 text-amber-400 mb-1" />
                 <span className="text-white font-medium text-xs text-center leading-tight">Vaga de<br/>Garagem</span>
               </div>
-              <div className="bg-black/40 backdrop-blur-sm border border-blue-400/30 rounded-full w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
+              <div className="bg-black/40 backdrop-blur-sm border border-blue-400/30 rounded-full w-20 h-20 md:w-24 md:h-24 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
                 <Waves className="w-5 h-5 text-amber-400 mb-1" />
                 <span className="text-white font-medium text-xs text-center leading-tight">Rooftop<br/>com Vista</span>
               </div>
-              <div className="bg-black/40 backdrop-blur-sm border border-amber-400/30 rounded-full w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
+              <div className="bg-black/40 backdrop-blur-sm border border-amber-400/30 rounded-full w-20 h-20 md:w-24 md:h-24 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
                 <Shield className="w-5 h-5 text-amber-400 mb-1" />
                 <span className="text-white font-medium text-xs text-center leading-tight">Projeto<br/>Retrofit</span>
               </div>
             </div>
 
-            {/* CTA Principal - Agora estilo WhatsApp verde */}
+            {/* Secondary CTA (agora primeiro) */}
+            <div className="animate-fade-in-delayed mt-6 md:mt-10">
+              <Button
+                variant="outline"
+                className="border border-white/50 text-white hover:bg-white hover:text-slate-900 px-6 py-2 text-sm backdrop-blur-sm shadow-lg transition-all duration-300 hover:scale-105 rounded-full"
+              >
+                <TrendingUp className="w-4 h-4 mr-2" />
+                Material Completo
+              </Button>
+            </div>
+
+            {/* CTA Principal - Agora estilo WhatsApp verde (invertida para depois) */}
             <div className="animate-bounce-subtle mt-12 md:mt-16">
               <Button
                 size="lg"
@@ -107,17 +118,6 @@ const HeroSection = () => {
               </Button>
             </div>
 
-            {/* Secondary CTA */}
-            <div className="animate-fade-in-delayed mt-6 md:mt-10">
-              <Button 
-                variant="outline" 
-                className="border border-white/50 text-white hover:bg-white hover:text-slate-900 px-6 py-2 text-sm backdrop-blur-sm shadow-lg transition-all duration-300 hover:scale-105 rounded-full"
-              >
-                <TrendingUp className="w-4 h-4 mr-2" />
-                Material Completo
-              </Button>
-            </div>
-
             {/* Card do corretor removido conforme solicitação */}
 
           </div>
@@ -125,12 +125,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg className="w-full h-20 text-slate-50" viewBox="0 0 1200 120" fill="currentColor">
-          <path d="M0,100 C150,80 350,40 600,50 C850,60 1050,80 1200,100 L1200,120 L0,120 Z"></path>
-        </svg>
-      </div>
+  {/* Wave removido conforme solicitação */}
     </section>
   );
 };
