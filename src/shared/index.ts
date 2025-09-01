@@ -1,5 +1,6 @@
 // Shared Components
 export { default as Footer } from './Footer';
+export { PersonalBrandHero } from './components/PersonalBrandHero';
 
 // Re-export UI components
 export * from './ui/button';
