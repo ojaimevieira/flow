@@ -3,8 +3,8 @@ import { Instagram, Facebook } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center justify-center p-6">
-      <Card className="bg-black/20 backdrop-blur-sm border-purple-500/30 shadow-2xl">
+    <div className="min-h-screen bg-black flex items-center justify-center p-6">
+      <Card className="bg-gray-900/80 backdrop-blur-sm border-gray-700/50 shadow-2xl">
         <CardContent className="p-12 text-center">
           {/* Domínio */}
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-wide">
