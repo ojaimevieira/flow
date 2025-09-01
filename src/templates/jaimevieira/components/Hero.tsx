@@ -1,4 +1,4 @@
-import { PersonalBrandHero } from "@/shared/components/PersonalBrandHero";
+import { PersonalBrandHero } from "./PersonalBrandHero";
 
 export const Hero = () => {
   return (
