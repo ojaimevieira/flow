@@ -6,23 +6,23 @@ interface Hero1Props {
   handle: string;
   instagramUrl?: string;
   facebookUrl?: string;
-  backgroundColor?: string;
 }
 
 export const Hero1 = ({ 
   domain, 
   handle, 
   instagramUrl, 
-  facebookUrl,
-  backgroundColor = "bg-black"
+  facebookUrl
 }: Hero1Props) => {
   return (
-    <div className={`min-h-screen ${backgroundColor} flex items-center justify-center p-6`}>
-      <Card className="bg-gray-900/80 backdrop-blur-sm border-gray-700/50 shadow-2xl">
+    <div className="min-h-screen bg-background flex items-center justify-center p-6">
+      <Card className="bg-card/80 backdrop-blur-sm border-border/50 shadow-2xl">
         <CardContent className="p-12 text-center">
           {/* Domínio */}
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-wide">
-            {domain}
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-8 tracking-wide">
+            <span className="bg-gradient-to-r from-[hsl(var(--template-primary))] to-[hsl(var(--template-secondary))] bg-clip-text text-transparent">
+              {domain}
+            </span>
           </h1>
           
           {/* Redes Sociais */}
@@ -32,7 +32,7 @@ export const Hero1 = ({
                 href={instagramUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white hover:text-pink-400 transition-colors duration-300"
+                className="text-muted-foreground hover:text-[hsl(var(--template-primary))] transition-colors duration-300"
               >
                 <Instagram size={36} />
               </a>
@@ -42,7 +42,7 @@ export const Hero1 = ({
                 href={facebookUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-400 transition-colors duration-300"
+                className="text-muted-foreground hover:text-[hsl(var(--template-secondary))] transition-colors duration-300"
               >
                 <Facebook size={36} />
               </a>
@@ -50,9 +50,16 @@ export const Hero1 = ({
           </div>
           
           {/* Handle */}
-          <p className="text-xl text-gray-300 font-medium">
+          <p className="text-xl text-muted-foreground font-medium">
             {handle}
           </p>
+          
+          {/* Badge de identificação */}
+          <div className="mt-6">
+            <span className="bg-[hsl(var(--template-primary))]/20 text-[hsl(var(--template-primary))] px-3 py-1 rounded-full text-sm font-mono border border-[hsl(var(--template-primary))]/30">
+              📄 Hero1.tsx
+            </span>
+          </div>
         </CardContent>
       </Card>
     </div>
