@@ -1,158 +1,127 @@
 import { Card, CardContent } from "@/shared/ui/card";
 import { Badge } from "@/shared/ui/badge";
 import { Button } from "@/shared/ui/button";
-import { 
-  MapPin, 
-  Building2, 
-  Car, 
-  Waves, 
+import {
+  MapPin,
+  Building2,
+  Car,
+  Waves,
   TreePine,
   Dumbbell,
   Shield,
-  TrendingUp
+  TrendingUp,
+  MessageCircle
 } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
-      {/* Background Effects */}
+    <section className="relative h-screen overflow-hidden">
+      {/* Background Image */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-600/20 rounded-full blur-3xl" />
+        <img 
+          src="/src/assets/imoveis-sawala/hero-building.jpg"
+          alt="Edifício Laranjeiras - Sawala Incorporadora"
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).src = '/placeholder-building.jpg';
+          }}
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60" />
+        {/* Gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
       </div>
 
-      <div className="container mx-auto px-6 pt-20 pb-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+      {/* Content */}
+  <div className="container mx-auto px-8 md:px-12 py-10 md:py-14 relative z-10 h-full flex items-center">
+        <div className="w-full">
           
-          {/* Left Content */}
-          <div className="text-white space-y-8">
-            <Badge className="bg-amber-600/20 text-amber-400 border-amber-500/30 text-lg px-6 py-2">
-              <Building2 className="w-5 h-5 mr-2" />
-              LANÇAMENTO EXCLUSIVO
-            </Badge>
+          {/* Hero Content - Centralizado com espaçamento otimizado */}
+          <div className="w-full max-w-5xl mx-auto text-center text-white space-y-12 md:space-y-14 animate-fade-in">
+            
+            {/* Badge - Menor e mais sutil */}
+            <div className="animate-slide-down">
+              <Badge className="bg-amber-600/90 backdrop-blur-sm text-white border-amber-500/50 text-sm px-4 py-2 shadow-lg inline-flex items-center">
+                <Building2 className="w-4 h-4 mr-2" />
+                LANÇAMENTO EXCLUSIVO
+              </Badge>
+            </div>
 
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                <span className="block text-white">LANÇAMENTO</span>
-                <span className="block bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
+            {/* Main Title - Hierarquia ajustada */}
+            <div className="space-y-4 animate-slide-up">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
+                <span className="block text-white drop-shadow-2xl">LANÇAMENTO</span>
+                <span className="block bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 bg-clip-text text-transparent drop-shadow-lg text-5xl md:text-6xl lg:text-7xl font-black italic">
                   LARANJEIRAS
                 </span>
               </h1>
               
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Chegou o lançamento que vai <strong>transformar o seu jeito de viver</strong>. 
-                Localização privilegiada no coração de Laranjeiras.
+              <p className="text-base md:text-lg text-white/95 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+                O empreendimento que vai <strong className="text-amber-400 font-bold">transformar seu jeito de viver</strong> no coração de Laranjeiras.
               </p>
             </div>
 
-            {/* Features */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex items-center space-x-3 text-blue-100">
-                <Building2 className="w-5 h-5 text-amber-400" />
-                <span>Studios, 1, 2 e 3 Quartos</span>
-              </div>
-              <div className="flex items-center space-x-3 text-blue-100">
-                <Car className="w-5 h-5 text-amber-400" />
-                <span>Vaga de Garagem</span>
-              </div>
-              <div className="flex items-center space-x-3 text-blue-100">
-                <Waves className="w-5 h-5 text-amber-400" />
-                <span>Rooftop com Vista</span>
-              </div>
-              <div className="flex items-center space-x-3 text-blue-100">
-                <Shield className="w-5 h-5 text-amber-400" />
-                <span>Projeto Retrofit</span>
-              </div>
-            </div>
-
-            {/* Location */}
-            <div className="bg-blue-800/30 backdrop-blur-sm border border-blue-700/50 rounded-lg p-6">
-              <div className="flex items-center space-x-3 mb-3">
-                <MapPin className="w-6 h-6 text-amber-400" />
-                <span className="text-lg font-semibold text-white">Rua Moura Brasil, 44 - Laranjeiras</span>
-              </div>
-              <p className="text-blue-100">
-                A apenas 5 minutos do metrô, shopping e principais pontos da zona sul.
-              </p>
-            </div>
-
-            {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-amber-600 to-yellow-500 hover:from-amber-700 hover:to-yellow-600 text-white font-semibold px-8 py-4 text-lg"
-              >
-                Agendar Visita Agora
-                <Building2 className="w-5 h-5 ml-2" />
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 text-lg"
-              >
-                Baixar Material
-                <TrendingUp className="w-5 h-5 ml-2" />
-              </Button>
-            </div>
-
-            {/* Contact */}
-            <div className="flex items-center space-x-4 pt-4">
-              <div className="text-sm text-blue-200">
-                <strong>Fale com Especialista:</strong>
-              </div>
-              <div className="text-xl font-bold text-amber-400">
-                (21) 97884-3534
-              </div>
-            </div>
-          </div>
-
-          {/* Right Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="/src/assets/imoveis-sawala/hero-building.webp"
-                alt="Edifício Laranjeiras - Sawala Incorporadora"
-                className="w-full h-[600px] object-cover"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = '/placeholder-building.jpg';
-                }}
-              />
-              
-              {/* Overlay com informações */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <div className="text-white">
-                  <p className="text-sm opacity-90 mb-1">RUA MOURA BRASIL, 44 - LARANJEIRAS</p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-2xl font-bold">VEM AÍ!</p>
-                    </div>
-                    <div className="text-right">
-                      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2">
-                        <img 
-                          src="/src/assets/imoveis-sawala/logo-sawala.webp" 
-                          alt="Sawala"
-                          className="h-8"
-                          onError={(e) => {
-                            (e.currentTarget as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTAwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0ZXh0IHg9IjEwIiB5PSIyNSIgZmlsbD0iI0ZGRkZGRiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCI+c2F3YWxhPC90ZXh0Pjwvc3ZnPg==';
-                          }}
-                        />
-                      </div>
-                    </div>
+            {/* Location - Mais compacto */}
+            <div className="relative max-w-lg mx-auto animate-fade-in-delayed mt-6 md:mt-8">
+              <div className="bg-gradient-to-r from-amber-500/20 via-yellow-400/20 to-amber-500/20 backdrop-blur-xl border border-amber-400/60 rounded-full py-2 px-4 shadow-2xl">
+                <div className="flex items-center justify-center space-x-2">
+                  <div className="bg-amber-400 p-1.5 rounded-full">
+                    <MapPin className="w-4 h-4 text-black" />
+                  </div>
+                  <div className="text-left">
+                    <div className="text-base font-bold text-white">Rua Moura Brasil, 44</div>
+                    <div className="text-xs text-amber-400 font-medium">Laranjeiras - 5min do metrô</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating badges */}
-            <div className="absolute -top-4 -left-4 bg-amber-500 text-white px-4 py-2 rounded-lg font-bold shadow-lg">
-              🔥 PRÉ-LANÇAMENTO
+            {/* Features - Redondos com padding menor */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 max-w-3xl mx-auto animate-slide-up-delayed mt-10 md:mt-12">
+              <div className="bg-black/40 backdrop-blur-sm border border-blue-400/30 rounded-full w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
+                <Building2 className="w-5 h-5 text-amber-400 mb-1" />
+                <span className="text-white font-medium text-xs text-center leading-tight">Studios a<br/>3 Quartos</span>
+              </div>
+              <div className="bg-black/40 backdrop-blur-sm border border-amber-400/30 rounded-full w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
+                <Car className="w-5 h-5 text-amber-400 mb-1" />
+                <span className="text-white font-medium text-xs text-center leading-tight">Vaga de<br/>Garagem</span>
+              </div>
+              <div className="bg-black/40 backdrop-blur-sm border border-blue-400/30 rounded-full w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
+                <Waves className="w-5 h-5 text-amber-400 mb-1" />
+                <span className="text-white font-medium text-xs text-center leading-tight">Rooftop<br/>com Vista</span>
+              </div>
+              <div className="bg-black/40 backdrop-blur-sm border border-amber-400/30 rounded-full w-24 h-24 md:w-28 md:h-28 flex flex-col items-center justify-center p-1 hover:bg-black/60 transition-all duration-300 hover:scale-105">
+                <Shield className="w-5 h-5 text-amber-400 mb-1" />
+                <span className="text-white font-medium text-xs text-center leading-tight">Projeto<br/>Retrofit</span>
+              </div>
             </div>
-            
-            <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white px-4 py-2 rounded-lg font-bold shadow-lg">
-              💎 ALTO PADRÃO
+
+            {/* CTA Principal - Agora estilo WhatsApp verde */}
+            <div className="animate-bounce-subtle mt-12 md:mt-16">
+              <Button
+                size="lg"
+                className="bg-gradient-to-br from-green-600 via-emerald-500 to-green-700 hover:from-green-700 hover:to-emerald-600 text-white font-black px-8 py-4 text-lg shadow-2xl hover:shadow-green-500/40 transition-all duration-500 transform hover:scale-110 rounded-2xl border-2 border-green-400/60"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                AGENDAR VISITA AGORA
+              </Button>
             </div>
+
+            {/* Secondary CTA */}
+            <div className="animate-fade-in-delayed mt-6 md:mt-10">
+              <Button 
+                variant="outline" 
+                className="border border-white/50 text-white hover:bg-white hover:text-slate-900 px-6 py-2 text-sm backdrop-blur-sm shadow-lg transition-all duration-300 hover:scale-105 rounded-full"
+              >
+                <TrendingUp className="w-4 h-4 mr-2" />
+                Material Completo
+              </Button>
+            </div>
+
+            {/* Card do corretor removido conforme solicitação */}
+
           </div>
+
         </div>
       </div>
 
