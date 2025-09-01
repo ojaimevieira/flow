@@ -330,6 +330,10 @@ npm run build
 - **Tema**: Classe CSS isolada para cores
 - **Assets**: Pasta específica em `/assets/`
 
+### 🎨 Metodologia Criativa
+- **[📖 Guia de Adaptação de Conteúdo](docs/CONTENT_ADAPTATION_GUIDE.md)** - Como criar conteúdo contextual por nicho
+- **[🧠 Metodologia Criativa](docs/CREATIVE_METHODOLOGY.md)** - Sistema de geração de universos fictícios convincentes
+
 ### Performance das Miniaturas
 - **Dimensões**: 1200x800px (qualidade total)
 - **Formato**: WEBP (melhor compressão)
