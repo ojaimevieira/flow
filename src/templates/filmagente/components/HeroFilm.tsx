@@ -1,13 +1,15 @@
 import { Button } from "@/shared/ui/button";
 import { ArrowRight, Shield, Clock, CheckCircle } from "lucide-react";
 
+import Background from '@/assets/filmagente/background.webp';
+
 const HeroFilm = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://filmagente.jaimevieira.com/images/bg-capa_1.webp" 
+          src={Background} 
           alt="Background"
           className="w-full h-full object-cover"
         />

@@ -2,7 +2,11 @@ import { Badge } from "@/shared/ui/badge";
 import { Button } from "@/shared/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/shared/ui/card";
 import { useRef } from "react";
+import Hero500x500 from '@/assets/edicao-imagens-ia/hero_500x500.webp';
+import ProdutoDepois500x500 from '@/assets/edicao-imagens-ia/produto_depois_500x500.webp';
+import ProdutoAntes500x500 from '@/assets/edicao-imagens-ia/produto_antes_500x500.webp';
 import { 
+
   Camera, 
   Sparkles, 
   Zap, 
@@ -88,11 +92,11 @@ const HeroSection = ({ heroBlobARef, heroBlobBRef }: HeroSectionProps) => {
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden">
                   <img 
-                    src="https://picsum.photos/500/500?random=100" 
+                    src={Hero500x500} 
                     alt="Produto com fundo branco - antes da edição"
                     className="w-full h-full object-cover grayscale"
                     onError={(e) => {
-                      e.currentTarget.src = 'https://via.placeholder.com/500x500/cccccc/666666?text=Produto+Antes';
+                      e.currentTarget.src = '{ProdutoAntes500x500}';
                     }}
                   />
                 </div>
@@ -109,11 +113,11 @@ const HeroSection = ({ heroBlobARef, heroBlobBRef }: HeroSectionProps) => {
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden">
                   <img 
-                    src="https://picsum.photos/500/500?random=200" 
+                    src={ProdutoDepois500x500} 
                     alt="Produto em cenário profissional - depois da edição"
                     className="w-full h-full object-cover"
                     onError={(e) => {
-                      e.currentTarget.src = 'https://via.placeholder.com/500x500/22c55e/ffffff?text=Produto+Depois';
+                      e.currentTarget.src = '{ProdutoDepois500x500}';
                     }}
                   />
                 </div>

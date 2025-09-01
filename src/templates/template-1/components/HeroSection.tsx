@@ -1,6 +1,7 @@
 import { Button } from "@/shared/ui/button";
 import { Badge } from "@/shared/ui/badge";
 import { ArrowRight, Play, Sparkles, Video, Zap } from "lucide-react";
+import Hero600x800 from '@/assets/template-1/hero_600x800.webp';
 
 const HeroSection = () => {
   return (
@@ -105,11 +106,11 @@ const HeroSection = () => {
               {/* Main image */}
               <div className="relative bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-3xl p-8 backdrop-blur-sm border border-purple-500/30">
                 <img
-                  src="https://images.unsplash.com/photo-1619364726002-dfd4fdaee5de?w=600&h=800&fit=crop&crop=face"
+                  src={Hero600x800}
                   alt="Criadora de conteúdo editando vídeos"
                   className="w-full h-auto rounded-2xl shadow-2xl"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = 'https://picsum.photos/600/800?random=1000';
+                    (e.currentTarget as HTMLImageElement).src = '/placeholder-image.jpg';
                   }}
                 />
                 

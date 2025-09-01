@@ -23,6 +23,9 @@ import {
   AlertTriangle,
   Gift
 } from "lucide-react";
+import Hero500x500 from '@/assets/edicao-imagens-ia/hero_500x500.webp';
+import ProdutoAntes500x500 from '@/assets/edicao-imagens-ia/produto_antes_500x500.webp';
+import ProdutoDepois500x500 from '@/assets/edicao-imagens-ia/produto_depois_500x500.webp';
 
 // Import components
 import HeroSection from "../components/HeroSection";
@@ -197,11 +200,11 @@ const EdicaoImagensIALanding = () => {
                     </div>
                     <div className="aspect-square rounded-lg overflow-hidden">
                       <img
-                        src="https://picsum.photos/500/500?random=100"
+                        src={ProdutoAntes500x500}
                         alt="Produto com fundo branco - antes da edição"
                         className="w-full h-full object-cover grayscale"
                         onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = 'https://via.placeholder.com/500x500/cccccc/666666?text=Produto+Antes';
+                          (e.currentTarget as HTMLImageElement).src = '/placeholder-image.jpg';
                         }}
                       />
                     </div>
@@ -218,11 +221,11 @@ const EdicaoImagensIALanding = () => {
                     </div>
                     <div className="aspect-square rounded-lg overflow-hidden">
                       <img
-                        src="https://picsum.photos/500/500?random=200"
+                        src={ProdutoDepois500x500}
                         alt="Produto em cenário profissional - depois da edição"
                         className="w-full h-full object-cover"
                         onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = 'https://via.placeholder.com/500x500/22c55e/ffffff?text=Produto+Depois';
+                          (e.currentTarget as HTMLImageElement).src = '/placeholder-image.jpg';
                         }}
                       />
                     </div>

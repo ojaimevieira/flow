@@ -1,5 +1,7 @@
 import { Button } from "@/shared/ui/button";
 
+import Hero1000x600 from '@/assets/gestao-saude/hero_1000x600.webp';
+
 const HeroGestaoSaude = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 overflow-hidden">
@@ -94,7 +96,7 @@ const HeroGestaoSaude = () => {
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  src={Hero1000x600}
                   alt="Profissionais de saúde em reunião"
                   className="w-full h-[500px] object-cover"
                 />

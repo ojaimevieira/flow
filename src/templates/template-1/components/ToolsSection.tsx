@@ -15,11 +15,14 @@ import {
   Clock,
   Target
 } from "lucide-react";
+import Ferramenta600x400 from '@/assets/template-1/ferramenta_600x400.webp';
+import Icone120x120 from '@/assets/template-1/icone_120x120.webp';
+import Demo600x400 from '@/assets/template-1/demo_600x400.webp';
 
 const ToolsSection = () => {
   const mainTool = {
     name: "CapCut Pro",
-    logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=120&fit=crop",
+    logo: Icone120x120,
     description: "Editor profissional com IA integrada",
     rating: 4.8,
     downloads: "500M+",
@@ -39,7 +42,7 @@ const ToolsSection = () => {
   const alternativeTools = [
     {
       name: "DaVinci Resolve",
-      logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=80&h=80&fit=crop",
+      logo: Icone120x120,
       type: "Profissional",
       price: "Gratuito",
       rating: 4.7,
@@ -48,7 +51,7 @@ const ToolsSection = () => {
     },
     {
       name: "Adobe Premiere", 
-      logo: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=80&h=80&fit=crop",
+      logo: Icone120x120,
       type: "Profissional",
       price: "Pago",
       rating: 4.5,
@@ -57,7 +60,7 @@ const ToolsSection = () => {
     },
     {
       name: "InShot",
-      logo: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=80&h=80&fit=crop",
+      logo: Icone120x120,
       type: "Mobile",
       price: "Freemium",
       rating: 4.6,
@@ -66,7 +69,7 @@ const ToolsSection = () => {
     },
     {
       name: "Final Cut Pro",
-      logo: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=80&h=80&fit=crop",
+      logo: Icone120x120,
       type: "Mac Exclusivo",
       price: "Pago",
       rating: 4.8,
@@ -139,7 +142,7 @@ const ToolsSection = () => {
                         alt={mainTool.name}
                         className="w-full h-full object-cover"
                         onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = "https://picsum.photos/120/120?random=4000";
+                          (e.currentTarget as HTMLImageElement).src = '/placeholder-image.jpg';
                         }}
                       />
                     </div>
@@ -200,11 +203,11 @@ const ToolsSection = () => {
                 <div className="relative">
                   <div className="aspect-video bg-gray-800 rounded-xl overflow-hidden border border-blue-500/30">
                     <img 
-                      src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop"
+                      src={Ferramenta600x400}
                       alt="Demo da ferramenta"
                       className="w-full h-full object-cover"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "https://picsum.photos/600/400?random=4001";
+                        (e.currentTarget as HTMLImageElement).src = '/placeholder-image.jpg';
                       }}
                     />
                     
@@ -249,7 +252,7 @@ const ToolsSection = () => {
                       alt={tool.name}
                       className="w-full h-full object-cover"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = `https://picsum.photos/80/80?random=${4010 + index}`;
+                        (e.currentTarget as HTMLImageElement).src = '/placeholder-image.jpg';
                       }}
                     />
                   </div>
