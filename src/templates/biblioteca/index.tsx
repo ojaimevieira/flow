@@ -1,7 +1,17 @@
-import { Hero3 } from '@/shared/components/Hero3';
-import { FAQ1 } from '@/shared/components/FAQ1';
+import { Hero1, FAQ1 } from '@/shared';
 
 const BibliotecaTemplate = () => {
+  const exemploFaqs = [
+    {
+      question: "Como funciona este sistema de componentes?",
+      answer: "Cada componente tem uma versão numerada (Hero1, FAQ1) que pode ser reutilizada em qualquer template."
+    },
+    {
+      question: "Como adicionar um novo componente?",
+      answer: "Identifique padrões similares, crie a próxima versão numerada e adicione aos exports do shared/index.ts"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header da Biblioteca */}
@@ -16,61 +26,59 @@ const BibliotecaTemplate = () => {
         </div>
       </div>
 
-      {/* Lista de Componentes Atuais */}
-      <div className="py-16">
+      {/* Demonstração Hero1 */}
+      <div className="py-8 bg-gray-100">
+        <div className="container mx-auto px-6">
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">
+            🎯 Hero1 - Marca Pessoal
+          </h3>
+        </div>
+      </div>
+
+      <Hero1 
+        domain="biblioteca.dev"
+        handle="@biblioteca"
+        instagramUrl="https://instagram.com/exemplo"
+        facebookUrl="https://facebook.com/exemplo"
+      />
+
+      {/* Demonstração FAQ1 */}
+      <FAQ1 
+        faqs={exemploFaqs}
+        title="FAQ1 - Accordion"
+        subtitle="Exemplo do componente FAQ numerado"
+        badge="📋 Teste"
+      />
+
+      {/* Status dos Componentes */}
+      <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-            🧩 Componentes Disponíveis
+            📊 Status dos Componentes
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
-                🎯 PersonalBrandHero
+            <div className="bg-white rounded-lg p-6 border-2 border-green-200">
+              <h3 className="text-xl font-bold text-green-800 mb-3">
+                ✅ Hero1
               </h3>
               <p className="text-gray-600 mb-4">
-                Componente Hero para marca pessoal com links sociais
+                Componente para marca pessoal - design minimalista
               </p>
-              <div className="bg-blue-100 p-3 rounded text-sm">
-                <strong>Usado em:</strong> jaimevieira
+              <div className="bg-green-100 p-3 rounded text-sm">
+                <strong>Status:</strong> Ativo | <strong>Usado em:</strong> jaimevieira
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
-                ❓ FAQSection
+            <div className="bg-white rounded-lg p-6 border-2 border-green-200">
+              <h3 className="text-xl font-bold text-green-800 mb-3">
+                ✅ FAQ1
               </h3>
               <p className="text-gray-600 mb-4">
-                Componente FAQ com accordion expansível
+                FAQ com accordion expansível
               </p>
-              <div className="bg-blue-100 p-3 rounded text-sm">
-                <strong>Usado em:</strong> filmagente, jaimevieira
-              </div>
-            </div>
-          </div>
-
-          {/* Plano de Numeração */}
-          <div className="mt-16 bg-yellow-50 border-2 border-yellow-200 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-              📋 Plano de Numeração
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-bold text-gray-700 mb-2">🔄 Próximas Alterações:</h4>
-                <ul className="space-y-1 text-gray-600">
-                  <li>• PersonalBrandHero → <strong>Hero1</strong></li>
-                  <li>• FAQSection → <strong>FAQ1</strong></li>
-                  <li>• Identificar novos padrões → Hero2, Hero3, etc.</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-700 mb-2">✅ Benefícios:</h4>
-                <ul className="space-y-1 text-gray-600">
-                  <li>• Organização clara por versões</li>
-                  <li>• Fácil adição de novos padrões</li>
-                  <li>• Controle centralizado</li>
-                  <li>• Sistema de temas integrado</li>
-                </ul>
+              <div className="bg-green-100 p-3 rounded text-sm">
+                <strong>Status:</strong> Ativo | <strong>Usado em:</strong> múltiplos templates
               </div>
             </div>
           </div>
