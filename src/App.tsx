@@ -25,7 +25,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Showcase />} />
+          <Route path="/" element={<JaimeVieiraLanding />} />
+          <Route path="/showcase" element={<Showcase />} />
           <Route path="/original" element={<GamingLanding />} />
           <Route path="/film-example" element={<FilmAgenteLanding />} />
           <Route path="/restaurante-curso" element={<RestauranteCursoLanding />} />
